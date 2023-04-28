@@ -1,0 +1,14 @@
+html, body {
+    background-image: url("/Pictures/VinPhone_Wallpaper.webp");
+    font-family: 'Ubuntu Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+.card1 {
+    width: 1000px;
+    height: 6000px;
+    left: 137px;
+}
+.text1 {
+    left: 410px;
+}
