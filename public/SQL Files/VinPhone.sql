@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 27. Apr 2023 um 21:48
+-- Erstellungszeit: 29. Apr 2023 um 12:54
 -- Server-Version: 10.4.28-MariaDB
 -- PHP-Version: 8.2.4
 
@@ -20,14 +20,54 @@ SET time_zone = "+00:00";
 --
 -- Datenbank: `vinphone`
 --
+CREATE DATABASE IF NOT EXISTS `vinphone` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `vinphone`;
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `phone_collection`
+-- Tabellenstruktur für Tabelle `doctrine_migration_versions`
 --
 
-CREATE TABLE `phone_collection` (
+DROP TABLE IF EXISTS `doctrine_migration_versions`;
+CREATE TABLE `doctrine_migration_versions` (
+  `version` varchar(191) NOT NULL,
+  `executed_at` datetime DEFAULT NULL,
+  `execution_time` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Daten für Tabelle `doctrine_migration_versions`
+--
+
+INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
+('DoctrineMigrations\\Version20230425202257', '2023-04-25 22:23:12', 45);
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `messenger_messages`
+--
+
+DROP TABLE IF EXISTS `messenger_messages`;
+CREATE TABLE `messenger_messages` (
+  `id` bigint(20) NOT NULL,
+  `body` longtext NOT NULL,
+  `headers` longtext NOT NULL,
+  `queue_name` varchar(190) NOT NULL,
+  `created_at` datetime NOT NULL,
+  `available_at` datetime NOT NULL,
+  `delivered_at` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `vinphone`
+--
+
+DROP TABLE IF EXISTS `vinphone`;
+CREATE TABLE `vinphone` (
   `id` int(11) NOT NULL,
   `brand` varchar(255) NOT NULL,
   `model` varchar(255) NOT NULL,
@@ -35,10 +75,10 @@ CREATE TABLE `phone_collection` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Daten für Tabelle `phone_collection`
+-- Daten für Tabelle `vinphone`
 --
 
-INSERT INTO `phone_collection` (`id`, `brand`, `model`, `price`) VALUES
+INSERT INTO `vinphone` (`id`, `brand`, `model`, `price`) VALUES
 (1, 'Nokia ', 'N95', '€70,00'),
 (2, 'Samsung', 'SGH-P300', '€25,00'),
 (3, 'Samsung', 'SGH-F300', '€46,24'),
@@ -87,16 +127,54 @@ INSERT INTO `phone_collection` (`id`, `brand`, `model`, `price`) VALUES
 (46, 'Nokia ', 'E90 Communicator', '€120,00'),
 (47, 'Nokia ', 'Communicator 9000', '€289,00'),
 (48, 'Nokia', 'E7', '€75,00'),
-(49, 'Nokia', 'N9', '€100,00');
+(49, 'Nokia', 'N9', '€100,00'),
+(50, 'Nokia', '6500 Slide', '€99,00'),
+(51, 'Nokia', 'C2-01', '€20,00'),
+(52, 'Nokia', 'C2-03', '€41,76'),
+(53, 'Nokia', '2680', '€20,00'),
+(54, 'Nokia ', '5300 XpressMusic', '€80,00'),
+(55, 'Nokia', '5700 XpressMusic', '€119,79'),
+(56, 'LG', 'B471 ', '€16,43'),
+(57, 'LG', 'KU990 Viewty', '€15,52'),
+(58, 'Samsung', 'SCH-W830', '€34,00'),
+(59, 'Huawei', 'U5510', '€25,02'),
+(60, 'Huawei', 'U1250', '€20,00'),
+(61, 'Nokia', 'N86', '€68,50'),
+(62, 'Huawei ', 'T520', '€20,00'),
+(63, 'Samsung', 'SGH-T629', '€54,99'),
+(64, 'Samsung ', 'Tocco', '€30,00'),
+(65, 'Samsung', 'Star', '€15,00'),
+(66, 'Samsung', 'Jet ', '€25,00'),
+(67, 'LG', 'LH5000', '€40,76'),
+(68, 'Samsung', 'SGH-X530', '€25,00'),
+(69, 'Samsung', 'Blackjack', '€32,96'),
+(70, 'Samsung', 'GT-B2710', '€80,00'),
+(71, 'Nec', 'N223i', '€35,00'),
+(72, 'Nokia', '3120 Classic', '€22,00');
 
 --
 -- Indizes der exportierten Tabellen
 --
 
 --
--- Indizes für die Tabelle `phone_collection`
+-- Indizes für die Tabelle `doctrine_migration_versions`
 --
-ALTER TABLE `phone_collection`
+ALTER TABLE `doctrine_migration_versions`
+  ADD PRIMARY KEY (`version`);
+
+--
+-- Indizes für die Tabelle `messenger_messages`
+--
+ALTER TABLE `messenger_messages`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `IDX_75EA56E0FB7336F0` (`queue_name`),
+  ADD KEY `IDX_75EA56E0E3BD61CE` (`available_at`),
+  ADD KEY `IDX_75EA56E016BA31DB` (`delivered_at`);
+
+--
+-- Indizes für die Tabelle `vinphone`
+--
+ALTER TABLE `vinphone`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -104,10 +182,16 @@ ALTER TABLE `phone_collection`
 --
 
 --
--- AUTO_INCREMENT für Tabelle `phone_collection`
+-- AUTO_INCREMENT für Tabelle `messenger_messages`
 --
-ALTER TABLE `phone_collection`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+ALTER TABLE `messenger_messages`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT für Tabelle `vinphone`
+--
+ALTER TABLE `vinphone`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
