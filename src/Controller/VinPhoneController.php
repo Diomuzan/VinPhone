@@ -19,4 +19,12 @@ class VinPhoneController extends AbstractController {
 
         return $this->render('VinPhone.html.twig', ['phones' => $phones]);
     }
+
+    #[Route('/VinPhone/AddPhone', name: 'AddPhone')]
+    public function new(EntityManagerInterface $entityManager, int $id = null): Response {
+
+        return $this->render('VinPhone_AddPhone.html.twig');
+    }
+
+
 }
