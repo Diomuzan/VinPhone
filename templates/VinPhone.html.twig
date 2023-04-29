@@ -15,15 +15,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                {% set buttonClass = cycle(['button1', 'button2', 'button3', 'button4', 'button5', 'button6', 'button7', 'button8', 'button9', 'button10', 'button11', 'button12', 'button13', 'button14', 'button15', 'button16', 'button17', 'button18', 'button19', 'button20', 'button21', 'button22', 'button23', 'button24', 252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167168169170171172173174175176177178179180181182183184185186187188189190191192193194195196197198199200201202203204 205 206 207 208 209 210 211 212 213 214 215 216'], loop.index0) %}
                 {% for phone in phones %}
+                {% set buttonClass = cycle(['button1', 'button2', 'button3', 'button4', 'button5', 'button6', 'button7', 'button8', 'button9', 'button10', 'button11', 'button12', 'button13', 'button14', 'button15', 'button16', 'button17', 'button18', 'button19', 'button20', 'button21', 'button22', 'button23', 'button24', 'button25', 'button26',  'button27', 'button28', 'button29','button30', 'button31','button32', 'button33', 'button34', 'button35', 'button36', 'button37', 'button38',  'button39',  'button40', 'button41', 'button42', 'button43', 'button44', 'button45', 'button46', 'button47', 'button48', 'button49', 'button50', 'button51', 'button52', 'button53', 'button54', 'button55', 'button56', 'button57', 'button58', 'button59', 'button60', 'button61', 'button62', 'button63', 'button64', 'button65', 'button66', 'button67', 'button68', 'button69', 'button70', 'button71', 'button72'], loop.index0) %}
                 <tr>
                     <td>{{ phone.id }}</td>
                     <td>{{ phone.brand }}</td>
                     <td>{{ phone.model }}</td>
-                <button type="button" class="btn btn-outline-info">Primary</button>
-                <button type="button" class="btn btn-outline-success">Success</button>
-                <button type="button" class="btn btn-outline-danger">Danger</button>
+                <button type="button" class="btn btn-outline-info {{ buttonClass }} position-relative">Details</button>
+                <button type="button" class="btn btn-outline-secondary {{ buttonClass }} position-relative">Edit</button>
+                <button type="button" class="btn btn-outline-danger {{ buttonClass }} position-relative">Delete</button>
                 </tbody>
                 </tr>
                 {% endfor %}

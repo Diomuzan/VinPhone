@@ -12,3 +12,10 @@ html, body {
 .text1 {
     left: 410px;
 }
+
+.button1 {
+    top: 688px;
+    left: 650px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
