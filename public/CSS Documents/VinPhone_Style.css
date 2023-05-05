@@ -1,18 +1,24 @@
 html, body {
     background-image: url("/Pictures/VinPhone_Wallpaper.webp");
     font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.card {
     overflow: hidden;
 }
 
+
 .card1 {
-    width: 1000px;
-    height: 4150px;
-    border-radius: 30px;
-    left: 137px;
+    height: 500px;
+    width: 550px;
+    top: 90px;
+    left: 380px;
+    border-radius: 20px;
+    margin-right: 0;
 }
 
 .text1 {
-    left: 410px;
+    left: 180px;
 }
 
 .btn-outline-info:hover {
@@ -20,7 +26,8 @@ html, body {
 }
 
 .button1 {
-    left: 460px;
+    top: 20px;
+    left: 210px;
 }
 
 .card2 {
