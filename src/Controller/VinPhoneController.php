@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 use App\Entity\Vinphone;
+use App\Form\AddPhoneType;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -21,10 +22,18 @@ class VinPhoneController extends AbstractController {
     }
 
     #[Route('/VinPhone/Add', name: 'Add')]
-    public function new(EntityManagerInterface $entityManager, int $id = null): Response {
+    public function add(Request $request, EntityManagerInterface $entityManager): Response {
 
+        $phone = new AddPhoneType(AddPhoneType::class);
+        $form = $this->createForm(AddPhoneType::class);
+        $form->handleRequest();
 
-        return $this->render('VinPhone_Add.html.twig');
+        if ($form->isSubmitted() && $form->isValid()) {
+            $phone = $form->getData();
+            $entityManager->persist($form);
+             $entityManager->flush();
+    }
+            return $this->render('VinPhone_Add.html.twig', ['form' => $form]);
     }
 
     #[Route('/VinPhone/Delete', name: 'Delete')]
