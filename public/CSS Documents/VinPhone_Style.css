@@ -34,8 +34,64 @@ html, body {
     width: 1000px;
     height: 500px;
     border-radius: 30px;
-    top: 160px;
+    top: 90px;
     left: 137px;
 }
+
+.nbLogo {
+    left: 600px;
+    margin: 0;
+}
+
+.navItem1 {
+    left: 200px;
+}
+
+
+.navItem2 {
+    left: 780px;
+}
+
+.footer {
+    background-color: white;
+}
+
+.text1 {
+    left: 30px;
+}
+
+.FBLogo {
+    height: 35px;
+    width: 35px;
+    left: -60px;
+    border-radius: 8px;
+}
+
+.IGLogo {
+    height: 38px;
+    width: 38px;
+    left: -50px;
+}
+
+.TWLogo {
+    height: 35px;
+    width: 35px;
+    left: -40px;
+    border-radius: 8px;
+}
+
+.TTLogo {
+    height: 35px;
+    width: 35px;
+    left: -30px;
+}
+
+.card3 {
+    top: 150px;
+    height: 200px;
+}
+
+
+
 
 
