@@ -39,9 +39,9 @@ class VinPhoneController extends AbstractController {
         if ($form->isSubmitted() && $form->isValid()) {
             $phone = $form->getData();
             $entityManager->persist($form);
-             $entityManager->flush();
-    }
-            return $this->render('VinPhone_Register.html.twig', ['form' => $form]);
+            $entityManager->flush();
+        }
+            return $this->render('VinPhone_Add.html.twig', ['form' => $form]);
     }
 
     #[Route('/Delete', name: 'Delete')]
