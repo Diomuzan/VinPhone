@@ -87,9 +87,32 @@ html, body {
 }
 
 .card3 {
-    top: 150px;
+    top: 200px;
     height: 200px;
 }
+
+.footer {
+    top: 400px;
+}
+.card4 {
+    height: 300px;
+    border-radius: 30px;
+    top: 205px;
+}
+
+.subButton {
+    top: 40px;
+}
+
+.formLabel2 {
+    top: 10px;
+}
+
+.formField2 {
+    top: 10px;
+}
+
+
 
 
 

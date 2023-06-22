@@ -72,13 +72,6 @@ class VinPhoneController extends AbstractController {
         return $this->render('VinPhone_Register.html.twig');
     }
 
-    #[Route('/Login', name: 'Login')]
-    public function login(): Response {
-
-
-        return $this->render('VinPhone_Login.html.twig');
-    }
-
     #[Route('/Admin/Home', name: 'AdminHome')]
     public function admin_home(EntityManagerInterface $entityManager, int $id = null): Response {
 
@@ -89,6 +82,18 @@ class VinPhoneController extends AbstractController {
         }
 
         return $this->render('VinPhone_Admin_Home.html.twig', ['phones' => $phones, 'controller_name' => 'VinPhoneController',]);
+    }
+
+    #[Route('/Member/Home', name: 'MemberHome')]
+    public function member_home(EntityManagerInterface $entityManager, int $id = null): Response {
+
+        if ($id !== null) {
+            $phones = $entityManager->getRepository(Vinphone::class)->find($id);
+        } else {
+            $phones = $entityManager->getRepository(Vinphone::class)->findAll();
+        }
+
+        return $this->render('VinPhone_Member_Home.html.twig', ['phones' => $phones, 'controller_name' => 'VinPhoneController',]);
     }
 
 }
