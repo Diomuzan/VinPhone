@@ -11,14 +11,14 @@ html, body {
 .card1 {
     height: 500px;
     width: 550px;
-    top: 90px;
+    top: 205px;
     left: 380px;
     border-radius: 20px;
     margin-right: 0;
 }
 
 .text1 {
-    left: 180px;
+    left: 100px;
 }
 
 .btn-outline-info:hover {
@@ -56,10 +56,6 @@ html, body {
     background-color: white;
 }
 
-.text1 {
-    left: 30px;
-}
-
 .FBLogo {
     height: 35px;
     width: 35px;
@@ -91,7 +87,26 @@ html, body {
     height: 200px;
 }
 
+.footer {
+    top: 400px;
+}
+
+.card4 {
+    height: 300px;
+    border-radius: 30px;
+    top: 205px;
+}
 
 
+.subButton {
+    top: 40px;
+}
 
 
+.formLabel2 {
+    top: 10px;
+}
+
+.formField2 {
+    top: 10px;
+}

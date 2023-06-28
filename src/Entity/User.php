@@ -1,6 +1,8 @@
 <?php
 namespace App\Entity;
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -22,15 +24,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(type: 'string')]
     private string $password;
 
+    #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Phone::class, orphanRemoval: true)]
+    private Collection $user_phone;
+
+    public function __construct()
+    {
+        $this->user_phone = new ArrayCollection();
+    }
+    
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUsername(): ?string
+    public function getUsername(): string
     {
         return $this->username;
     }
+
+    public function __toString(): string
+    {
+        return $this->getUsername();
+    }
+
 
     public function setUsername(string $username): static
     {
