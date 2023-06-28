@@ -1,14 +1,18 @@
 security:
+<<<<<<< Updated upstream
     # https://symfony.com/doc/current/security.html#registering-the-user-hashing-passwords
+=======
+    enable_authenticator_manager: true
+>>>>>>> Stashed changes
     password_hashers:
         Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface: 'auto'
-    # https://symfony.com/doc/current/security.html#loading-the-user-the-user-provider
+
     providers:
-        # used to reload user from session & other features (e.g. switch_user)
         app_user_provider:
             entity:
                 class: App\Entity\User
                 property: username
+
     firewalls:
         dev:
             pattern: ^/(_(profiler|wdt)|css|images|js)/
@@ -16,6 +20,7 @@ security:
         main:
             lazy: true
             provider: app_user_provider
+<<<<<<< Updated upstream
 
             # activate different ways to authenticate
             # https://symfony.com/doc/current/security.html#the-firewall
@@ -41,3 +46,15 @@ when@test:
                 cost: 4 # Lowest possible value for bcrypt
                 time_cost: 3 # Lowest possible value for argon
                 memory_cost: 10 # Lowest possible value for argon
+=======
+            form_login:
+                login_path: Login
+                check_path: Login
+            logout:
+                path: Logout
+                target: GuestHome
+
+    access_control:
+        - { path: ^/Admin, roles: ROLE_ADMIN }
+        - { path: ^/Member, roles: ROLE_MEMBER }
+>>>>>>> Stashed changes
