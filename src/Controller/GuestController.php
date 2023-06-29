@@ -7,12 +7,12 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 
-class VinPhoneController extends AbstractController {
+class GuestController extends AbstractController {
 
     #[Route('/Guest/Home', name: 'GuestHome')]
     public function guest_home(): Response {
 
-        return $this->render('VinPhone_Guest_Home.html.twig');
+        return $this->render('Guest_Home.html.twig');
     }
 
     #[Route('/Login', name: 'Login')]
@@ -21,7 +21,7 @@ class VinPhoneController extends AbstractController {
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('VinPhone_Login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        return $this->render('Login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
 
     #[Route('/', name: "app_home")]
@@ -37,7 +37,7 @@ class VinPhoneController extends AbstractController {
             return $this->redirectToRoute('MemberHome');
         }
 
-        return $this->render('VinPhone_Guest_Home.html.twig');
+        return $this->render('Guest_Home.html.twig');
     }
 
 

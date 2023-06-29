@@ -19,7 +19,7 @@ class MemberController extends AbstractController {
             $phones = $entityManager->getRepository(Phone::class)->findAll();
         }
 
-        return $this->render('VinPhone_Member_Home.html.twig', ['phones' => $phones]);
+        return $this->render('Member_Home.html.twig', ['phones' => $phones]);
     }
 
 

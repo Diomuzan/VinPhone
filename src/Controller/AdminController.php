@@ -21,7 +21,7 @@ class AdminController extends AbstractController {
         $user = $this->getUser();
         $account = $user ? $user->getUserIdentifier() : '';
 
-        return $this->render('VinPhone_Admin_Home.html.twig', ['phones' => $phones, 'account' => $account]);
+        return $this->render('Admin_Home.html.twig', ['phones' => $phones, 'account' => $account]);
     }
 
     #[Route('/Admin/Add', name: 'Add', methods: ['GET', 'POST'])]
@@ -37,7 +37,7 @@ class AdminController extends AbstractController {
             return $this->redirectToRoute('AdminHome', [], Response::HTTP_SEE_OTHER);
         }
 
-        return $this->render('VinPhone_Add.html.twig', ['phones' => $phones, 'form' => $form]);
+        return $this->render('Add.html.twig', ['phones' => $phones, 'form' => $form]);
     }
 
     #[Route('/Admin/Delete/{id}', name: 'Delete', methods: ['POST'])]

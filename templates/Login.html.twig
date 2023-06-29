@@ -10,19 +10,17 @@
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
 
-                 <form  method="POST" action="{{ path('Login') }}"  class= "loginForm">
+                 <form method="POST" action="{{ path('Login') }}"  class= "loginForm">
                 <h1 class="h3 mb-3 font-weight-normal">Login</h1>
                 <label for="inputUsername">Username</label>
                 <input type="text" value="{{ last_username }}" name="_username" id="_username" class="form-control">
                 <label for="inputPassword" class= "formLabel2 position-relative">Password</label>
                 <input type="password" name="_password" id="_password" class="formField2 form-control position-relative">
 
+                     <button class="subButton btn btn-lg btn-primary position-relative" type="submit">Sign in</button>
 
-                <button class="subButton btn btn-lg btn-primary position-relative" type="submit">Sign in</button>
-
-                <input type="hidden" name="_target_path" value="/">
-
-            </form>
+                     <input type="hidden" name="_target_path" value="/">
+                 </form>
         </div>
     </div>
 
