@@ -13,8 +13,9 @@ use Symfony\Component\Routing\Annotation\Route;
 
 
 class AdminController extends AbstractController {
+
     #[Route('/Admin/Home/{id}', name: 'AdminHome')]
-    public function admin_home(EntityManagerInterface $entityManager, int $id = null, PhoneRepository $phoneRepository): Response {
+    public function admin_home(PhoneRepository $phoneRepository, string $id, EntityManagerInterface $entityManager): Response {
 
         $phones = $phoneRepository->findAll();
 
@@ -24,9 +25,10 @@ class AdminController extends AbstractController {
         return $this->render('Admin_Home.html.twig', ['phones' => $phones, 'account' => $account]);
     }
 
+
     #[Route('/Admin/Add', name: 'Add', methods: ['GET', 'POST'])]
-    public function new(Request $request, PhoneRepository $phoneRepository): Response
-    {
+    public function new(Request $request, PhoneRepository $phoneRepository): Response {
+
         $phones = new Phone();
         $form = $this->createForm(AddPhoneType::class, $phones);
         $form->handleRequest($request);
@@ -40,12 +42,17 @@ class AdminController extends AbstractController {
         return $this->render('Add.html.twig', ['phones' => $phones, 'form' => $form]);
     }
 
-    #[Route('/Admin/Delete/{id}', name: 'Delete', methods: ['POST'])]
-    public function delete(Request $request, Phone $vinphone, PhoneRepository $phoneRepository): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$vinphone->getId(), $request->request->get('_token'))) {
-            $phoneRepository->remove($vinphone, true);
-        }
+    #[Route('/Admin/Delete/{id}', name: 'Delete')]
+    public function delete(Request $request, Phone $phone, PhoneRepository $phoneRepository, EntityManagerInterface $entityManager, $id): Response {
+
+     $phone = $entityManager->getRepository(Phone::class)->find($id);
+
+     if(!$phone) {
+         throw $this->createNotFoundException('Phone not found!');
+     }
+
+     $entityManager->remove($phone);
+     $entityManager->flush();
 
         return $this->redirectToRoute('AdminHome', [], Response::HTTP_SEE_OTHER);
     }

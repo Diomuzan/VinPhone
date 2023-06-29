@@ -1,5 +1,5 @@
 html, body {
-    background-image: url("/Pictures/VinPhone_Wallpaper.webp");
+    background-image: url("/Pictures/Wallpaper.webp");
     font-family: 'Ubuntu Condensed', sans-serif;
 }
 
@@ -34,7 +34,7 @@ html, body {
     width: 1000px;
     height: 500px;
     border-radius: 30px;
-    top: 90px;
+    top: 205px;
     left: 137px;
 }
 
@@ -98,7 +98,7 @@ html, body {
 }
 
 
-.subButton {
+.button2 {
     top: 40px;
 }
 
@@ -110,3 +110,14 @@ html, body {
 .formField2 {
     top: 10px;
 }
+
+.button3 {
+    top: 385px;
+    left: 450px;
+}
+
+.form1 {
+    top: -20px;
+}
+
+

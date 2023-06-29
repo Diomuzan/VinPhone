@@ -30,7 +30,7 @@
                     <td>{{ phone.model }}</td>
                     <td> {{ phone.price }}</td>
                   <td>
-                <button type="button" class="btn btn-outline-danger">Delete</button>
+                      |<a href="{{ path('Delete', {'id': phone.id}) }}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
                 </tbody>
                 </td>
                 </tr>

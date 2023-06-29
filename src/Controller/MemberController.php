@@ -10,23 +10,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MemberController extends AbstractController {
 
-    #[Route('/Member/Home', name: 'MemberHome')]
+    #[Route('/Member/Home/{id}', name: 'MemberHome')]
     public function member_home(EntityManagerInterface $entityManager, int $id = null): Response {
 
-        if ($id !== null) {
-            $phones = $entityManager->getRepository(Phone::class)->find($id);
-        } else {
-            $phones = $entityManager->getRepository(Phone::class)->findAll();
-        }
+        $phones = $entityManager->getRepository(Phone::class)->findAll();
 
-        return $this->render('Member_Home.html.twig', ['phones' => $phones]);
-    }
+        $user = $this->getUser();
+        $account = $user ? $user->getUserIdentifier() : '';
 
-
-    #[Route('/Detail', name: 'Detail')]
-    public function detail(EntityManagerInterface $entityManager, int $id = null): Response {
-
-
-        return $this->render('VinPhone_Detail.html.twig');
+        return $this->render('Member_Home.html.twig', ['phones' => $phones, 'account' => $account]);
     }
 }
