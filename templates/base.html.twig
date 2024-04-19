@@ -16,7 +16,7 @@
         {% endblock %}
     </head>
     {% block navbar %}
-        <nav class="navbar navbar-expand-lg bg bg-light">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
                 <p class="nbLogo navbar-brand position-relative">VinPhone</p>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,11 +28,7 @@
                             <a class="navLink1 nav-link position-relative" aria-current="page" href="{{ path('GuestHome') }}">Home</a>
                         </li>
                         <li class="navItem2 nav-item position-relative">
-                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                            <a class=" nav-link position-relative" href="{{ path('Logout') }}">Logout</a>
-                                {% else %}
-                                    <a class=" nav-link position-relative" href="{{ path('Login') }}">Login</a>
-                            {% endif %}
+                            <a class=" nav-link position-relative" href="{{ path('Login') }}">Login</a>
                         </li>
                     </ul>
                 </div>

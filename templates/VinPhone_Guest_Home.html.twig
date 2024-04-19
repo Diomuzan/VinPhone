@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VinPhone - Home{% endblock %}
+
+
+{% block body %}
+
+    <div class="card3 card position-relative">
+        <div class="card-body">
+            <h1>Home</h1>
+            <p>VinPhone is a website in which I show some phones which I really want to add in my awesome phone collection! <br>
+                It's a CRUD app written in HTML, CSS and lastly Symfony, SQL and also Twig is used</p>
+        </div>
+    </div>
+
+
+
+    <footer class="footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative">
+        <div class="col-md-4 d-flex align-items-center">
+            <span class="text1 mb-3 mb-md-0 text-body-secondary position-relative">© 2023 VinPhone</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a href="{{ asset('https://www.facebook.com') }}"><img class= "FBLogo position-relative" src="{{ asset('/Pictures/FBLogo.png') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.instagram.com') }}"><img class= "IGLogo position-relative" src="{{ asset('/Pictures/IGLogo.png') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.twitter.com') }}"><img class= "TWLogo position-relative" src="{{ asset('/Pictures/TWLogo.png') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.tiktok.com') }}"><img class= "TTLogo position-relative" src="{{ asset('/Pictures/TTLogo.png') }}"></a></li>
+        </ul>
+    </footer>
+    {% endblock %}
+
