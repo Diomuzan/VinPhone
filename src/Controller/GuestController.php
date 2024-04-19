@@ -19,7 +19,7 @@ class GuestController extends AbstractController {
         return $this->render('Login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
     #[Route('/', name: "app_home")]
-    public function redirectAction(Security $security, $id) {
+    public function redirectAction(Security $security) {
         if ($security->isGranted('ROLE_ADMIN')) {
             return $this->redirectToRoute('AdminHome');
         }
