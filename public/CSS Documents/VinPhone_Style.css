@@ -4,7 +4,7 @@ html, body {
 }
 
 .card {
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
@@ -54,6 +54,7 @@ html, body {
 
 .footer {
     background-color: white;
+    top: 800px;
 }
 
 .FBLogo {
@@ -69,7 +70,7 @@ html, body {
     left: -50px;
 }
 
-.TWLogo {
+.XLogo {
     height: 35px;
     width: 35px;
     left: -40px;
@@ -88,7 +89,7 @@ html, body {
 }
 
 .footer {
-    top: 400px;
+    background-color: white;
 }
 
 .card4 {
