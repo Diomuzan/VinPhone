@@ -19,7 +19,7 @@ class LoginController extends AbstractController {
       $error = $authenticationUtils->getLastAuthenticationError();
           $lastUsername = $authenticationUtils->getLastUsername();
 
-    return $this->render('VinPhone_Login.html.twig', ['controller_name' => 'LoginController', 'last_username'  =>  $lastUsername, 'error'  => $error,]);
+    return $this->render('login.html.twig', ['controller_name' => 'LoginController', 'last_username'  =>  $lastUsername, 'error'  => $error,]);
       }
 }
 

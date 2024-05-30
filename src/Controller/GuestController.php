@@ -8,11 +8,11 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Twig\Environment;
 
 class GuestController extends AbstractController {
-    #[Route('/Guest/Home', name: 'GuestHome')]
+    #[Route('/guest/home', name: 'guest_home')]
     public function guest_home(): Response {
-        return $this->render('Guest_Home.html.twig');
+        return $this->render('guest_home.html.twig');
     }
-    #[Route('/Login', name: 'Login')]
+    #[Route('/login', name: 'login')]
     public function login(AuthenticationUtils $authenticationUtils): Response {
         $error = $authenticationUtils->getLastAuthenticationError();
         $lastUsername = $authenticationUtils->getLastUsername();
@@ -26,9 +26,9 @@ class GuestController extends AbstractController {
         if ($security->isGranted('ROLE_MEMBER')) {
             return $this->redirectToRoute('MemberHome');
         }
-        return $this->render('Guest_Home.html.twig');
+        return $this->render('guest_home.html.twig');
     }
-    #[Route('/Logout', name: "Logout")]
+    #[Route('/logout', name: "logout")]
     public function logout(): Response {
         throw new \Exception('Don\'t forget to activate logout in security.yaml');
     }

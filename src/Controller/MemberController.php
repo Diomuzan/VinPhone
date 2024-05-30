@@ -18,6 +18,6 @@ class MemberController extends AbstractController {
         $user = $this->getUser();
         $account = $user ? $user->getUserIdentifier() : '';
 
-        return $this->render('Member_Home.html.twig', ['phones' => $phones, 'account' => $account]);
+        return $this->render('member_home.html.twig', ['phones' => $phones, 'account' => $account]);
     }
 }

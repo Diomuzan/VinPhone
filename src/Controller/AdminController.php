@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 use App\Entity\User;
 use App\Entity\Phone;
@@ -10,23 +9,20 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
-
 class AdminController extends AbstractController {
 
-    #[Route('/Admin/Home/{id}', name: 'AdminHome')]
+    #[Route('/admin/home/{id}', name: 'admin_home')]
     public function admin_home(PhoneRepository $phoneRepository, string $id, EntityManagerInterface $entityManager): Response {
-
         $phones = $phoneRepository->findAll();
 
         $user = $this->getUser();
         $account = $user ? $user->getUserIdentifier() : '';
 
-        return $this->render('Admin_Home.html.twig', ['phones' => $phones, 'account' => $account]);
+        return $this->render('admin_home.html.twig', ['phones' => $phones, 'account' => $account]);
     }
 
 
-    #[Route('/Admin/Add', name: 'Add', methods: ['GET', 'POST'])]
+    #[Route('/admin/add', name: 'add', methods: ['GET', 'POST'])]
     public function new(Request $request, PhoneRepository $phoneRepository): Response {
 
         $phones = new Phone();
@@ -38,11 +34,10 @@ class AdminController extends AbstractController {
 
             return $this->redirectToRoute('AdminHome', [], Response::HTTP_SEE_OTHER);
         }
-
-        return $this->render('Add.html.twig', ['phones' => $phones, 'form' => $form]);
+        return $this->render('add.html.twig', ['phones' => $phones, 'form' => $form]);
     }
 
-    #[Route('/Admin/Delete/{id}', name: 'Delete')]
+    #[Route('/admin/delete/{id}', name: 'delete')]
     public function delete(Request $request, Phone $phone, PhoneRepository $phoneRepository, EntityManagerInterface $entityManager, $id): Response {
 
      $phone = $entityManager->getRepository(Phone::class)->find($id);
