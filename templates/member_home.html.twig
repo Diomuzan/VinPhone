@@ -4,33 +4,25 @@
 
     <div class="card card1 position-relative">
         <div class="card-body">
-           <h1 class= "text1 position-relative">VinPhone</h1>
+            <h1 class= "text1 position-relative">Hi {{ account }}!</h1>
             <table class="table">
                 <thead>
                 <tr>
-                    <th scope="col">#</th>
                     <th scope="col">Brand</th>
                     <th scope="col">Model</th>
-
+                    <th scope="col">Price</th>
                 </tr>
                 </thead>
                 <tbody>
                 {% for phone in phones %}
                 <tr>
-                    <td>{{ phone.id }}</td>
                     <td>{{ phone.brand }}</td>
                     <td>{{ phone.model }}</td>
-                  <td>
-                <button type="button" class="btn btn-outline-info">Details</button>
-                <button type="button" class="btn btn-outline-secondary">Edit</button>
-                <button type="button" class="btn btn-outline-danger">Delete</button>
+                    <td>{{ phone.price }}</td>
                 </tbody>
-                </td>
                 </tr>
                 {% endfor %}
             </table>
-            <a href= "{{ path('Add') }}"><button type="button" class="btn btn-outline-success button1 position-relative">Add phone</button></a></div>
-        </div>
     </div>
-
+    </div>
 {% endblock %}

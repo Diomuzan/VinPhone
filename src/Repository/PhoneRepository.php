@@ -2,26 +2,26 @@
 
 namespace App\Repository;
 
-use App\Entity\Vinphone;
+use App\Entity\Phone;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<Vinphone>
+ * @extends ServiceEntityRepository<Phone>
  *
- * @method Vinphone|null find($id, $lockMode = null, $lockVersion = null)
- * @method Vinphone|null findOneBy(array $criteria, array $orderBy = null)
- * @method Vinphone[]    findAll()
- * @method Vinphone[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Phone|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Phone|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Phone[]    findAll()
+ * @method Phone[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class VinphoneRepository extends ServiceEntityRepository
+class PhoneRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Vinphone::class);
+        parent::__construct($registry, Phone::class);
     }
 
-    public function save(Vinphone $entity, bool $flush = false): void
+    public function save(Phone $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
 
@@ -30,7 +30,7 @@ class VinphoneRepository extends ServiceEntityRepository
         }
     }
 
-    public function remove(Vinphone $entity, bool $flush = false): void
+    public function remove(Phone $entity, bool $flush = false): void
     {
         $this->getEntityManager()->remove($entity);
 
@@ -40,7 +40,7 @@ class VinphoneRepository extends ServiceEntityRepository
     }
 
 //    /**
-//     * @return Vinphone[] Returns an array of Vinphone objects
+//     * @return Phone[] Returns an array of Phone objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -54,7 +54,7 @@ class VinphoneRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?Vinphone
+//    public function findOneBySomeField($value): ?Phone
 //    {
 //        return $this->createQueryBuilder('v')
 //            ->andWhere('v.exampleField = :val')
