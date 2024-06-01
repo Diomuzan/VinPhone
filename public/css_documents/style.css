@@ -7,7 +7,6 @@ html, body {
     overflow-x: hidden;
 }
 
-
 .card1 {
     height: 500px;
     width: 550px;
@@ -46,7 +45,6 @@ html, body {
 .navItem1 {
     left: 200px;
 }
-
 
 .navItem2 {
     left: 780px;
@@ -98,11 +96,9 @@ html, body {
     top: 205px;
 }
 
-
 .button2 {
     top: 40px;
 }
-
 
 .formLabel2 {
     top: 10px;
@@ -119,6 +115,10 @@ html, body {
 
 .form1 {
     top: -20px;
+}
+
+.subButton {
+    top: 40px;
 }
 
 

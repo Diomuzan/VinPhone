@@ -11,7 +11,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 class AdminController extends AbstractController {
 
-    #[Route('/admin/home/{id}', name: 'admin_home')]
+    #[Route('/admin/dashboard/{id}', name: 'admin_dashboard')]
     public function admin_home(PhoneRepository $phoneRepository, string $id, EntityManagerInterface $entityManager): Response {
         $phones = $phoneRepository->findAll();
 

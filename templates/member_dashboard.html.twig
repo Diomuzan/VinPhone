@@ -1,21 +1,30 @@
-{% extends 'base.html.twig' %}
-
-{% form_theme form 'bootstrap_5_layout.html.twig' %}
-
-{% block title %}VinPhone - Add{% endblock %}
+{% extends "base.html.twig" %}
 
 {% block body %}
 
-    <div class="card card2 position-relative">
-    <div class="card-body">
-        <h1>Add</h1>
-        <form method= "POST" class= "form1 position-relative">
-    {{ form_start(form) }}
-            {{ form_widget(form.submit, {'attr': {'class': 'button3 btn btn-outline-primary position-relative'}}) }}
-    {{ form_end(form) }}
-</form>
+    <div class="card card1 position-relative">
+        <div class="card-body">
+            <h1 class= "text1 position-relative">Hi {{ account }}!</h1>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Model</th>
+                    <th scope="col">Price</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for phone in phones %}
+                <tr>
+                    <td>{{ phone.brand }}</td>
+                    <td>{{ phone.model }}</td>
+                    <td>{{ phone.price }}</td>
+                </tbody>
+                </tr>
+                {% endfor %}
+            </table>
     </div>
-</div>
+    </div>
 
     <footer class="footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative">
         <div class="col-md-4 d-flex align-items-center">
