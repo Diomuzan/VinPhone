@@ -18,7 +18,7 @@ class AdminController extends AbstractController {
         $user = $this->getUser();
         $account = $user ? $user->getUserIdentifier() : '';
 
-        return $this->render('admin_dashboard.html.twig', ['phones' => $phones, 'account' => $account]);
+        return $this->render('admin_home.html.twig', ['phones' => $phones, 'account' => $account]);
     }
 
 
@@ -32,7 +32,7 @@ class AdminController extends AbstractController {
         if ($form->isSubmitted() && $form->isValid()) {
             $phoneRepository->save($phones, true);
 
-            return $this->redirectToRoute('admin_home', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('AdminHome', [], Response::HTTP_SEE_OTHER);
         }
         return $this->render('add.html.twig', ['phones' => $phones, 'form' => $form]);
     }
