@@ -9,10 +9,10 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-class AdminController extends AbstractController {
 
+class AdminController extends AbstractController {
     #[Route('/admin/dashboard/{id}', name: 'admin_dashboard')]
-    public function admin_home(PhoneRepository $phoneRepository, string $id, EntityManagerInterface $entityManager): Response {
+    public function admin_dashboard(PhoneRepository $phoneRepository, string $id, EntityManagerInterface $entityManager): Response {
         $phones = $phoneRepository->findAll();
 
         $user = $this->getUser();
@@ -20,8 +20,6 @@ class AdminController extends AbstractController {
 
         return $this->render('admin_home.html.twig', ['phones' => $phones, 'account' => $account]);
     }
-
-
     #[Route('/admin/add', name: 'add', methods: ['GET', 'POST'])]
     public function new(Request $request, PhoneRepository $phoneRepository): Response {
 

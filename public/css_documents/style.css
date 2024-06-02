@@ -91,7 +91,7 @@ html, body {
 }
 
 .card4 {
-    height: 300px;
+    height: 400px;
     border-radius: 30px;
     top: 205px;
 }
@@ -119,6 +119,16 @@ html, body {
 
 .subButton {
     top: 40px;
+}
+
+.text2 {
+    top: 85px;
+}
+
+.card5 {
+    height: 400px;
+    border-radius: 30px;
+    top: 205px;
 }
 
 

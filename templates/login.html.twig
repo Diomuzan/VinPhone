@@ -19,7 +19,9 @@
 
                      <button class="subButton btn btn-lg btn-primary position-relative" type="submit">Sign in</button>
 
-                <input type="hidden" name="_target_path" value="/">
+                     <p class= "text2 position-relative">Don't have a account yet? Register &nbsp<a href="{{ path('register') }}">here</a></p>
+
+                <input type="hidden" name="_target_path" value="{{ path('app_home') }}">
 
             </form>
         </div>
