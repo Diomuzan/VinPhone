@@ -30,7 +30,7 @@ class AdminController extends AbstractController {
         if ($form->isSubmitted() && $form->isValid()) {
             $phoneRepository->save($phones, true);
 
-            return $this->redirectToRoute('AdminHome', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin_home', [], Response::HTTP_SEE_OTHER);
         }
         return $this->render('add.html.twig', ['phones' => $phones, 'form' => $form]);
     }
@@ -47,6 +47,6 @@ class AdminController extends AbstractController {
      $entityManager->remove($phone);
      $entityManager->flush();
 
-        return $this->redirectToRoute('AdminHome', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('admin_home', [], Response::HTTP_SEE_OTHER);
     }
 }

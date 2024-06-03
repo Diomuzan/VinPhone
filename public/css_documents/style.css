@@ -126,9 +126,29 @@ html, body {
 }
 
 .card5 {
+    background-color: white;
     height: 400px;
     border-radius: 30px;
     top: 205px;
 }
+
+.button4 {
+    top: 67px;
+    left: 1px;
+}
+
+.registerForm {
+    width: 1253px;
+    top: 20px;
+    left: 14px;
+}
+
+.heading1 {
+    top: 20px;
+    left: 14px;
+}
+
+
+
 
 
