@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 04. Jun 2024 um 19:00
+-- Erstellungszeit: 05. Jun 2024 um 18:13
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -95,9 +95,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `username`, `roles`, `password`) VALUES
 (1, 'PhoneCollectorsJapan', '[\"ROLE_MEMBER\"]', '$2y$13$WzCB5tedpfjDorRx3.Vw7O9tCfV7apz.eeu19kB.JANDwcVTg3ddC'),
-(2, 'VinPhoneDivision', '[\"ROLE_ADMIN\"]', '$2y$13$3w.KAF3zapM.W2XcdReaZOo94yEelXAC9.H/LfzH2xRjhIzO0diOq'),
-(3, 'Pug', '[\"ROLE_MEMBER\"]', '$2y$13$2.rMyGN7FPw.MzIANB8ituGKXxM2SkDYLkwEgMEVvhhnO202itnqy'),
-(4, 'DestructiveDan', '[\"ROLE_ADMIN\"]', '$2y$13$pO8aYVq2D5Pxjqd4ATYty.1wd987.uuDttDg05IWICvwWzd6NS3K2');
+(2, 'Pug', '[\"ROLE_MEMBER\"]', '$2y$13$2.rMyGN7FPw.MzIANB8ituGKXxM2SkDYLkwEgMEVvhhnO202itnqy'),
+(3, 'DestructiveDan', '[\"ROLE_ADMIN\"]', '$2y$13$pO8aYVq2D5Pxjqd4ATYty.1wd987.uuDttDg05IWICvwWzd6NS3K2'),
+(4, 'VinPhoneDivision', '[\"ROLE_ADMIN\"]', '$2y$13$jLEwNtxAUOL4VGSF8yPzjeS/mAuRpGaXlOCu8MhCY9MLe0MwIFxee');
 
 --
 -- Indizes der exportierten Tabellen
@@ -152,7 +152,7 @@ ALTER TABLE `phone`
 -- AUTO_INCREMENT für Tabelle `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints der exportierten Tabellen

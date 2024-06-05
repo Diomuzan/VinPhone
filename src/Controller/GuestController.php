@@ -12,10 +12,6 @@ class GuestController extends AbstractController {
     public function guest_home(): Response {
         return $this->render('home.html.twig');
     }
-    #[Route('/logout', name: "logout")]
-    public function logout(): Response {
-        throw new \Exception('Don\'t forget to activate logout in security.yaml');
-    }
 }
 
 
