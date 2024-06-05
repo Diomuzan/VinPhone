@@ -10,16 +10,24 @@
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
 
-                 <form  method="POST" action="{{ path('login') }}"  class= "loginForm">
-                <h1 class="h3 mb-3 font-weight-normal">Login </h1>
-                <label for="inputUsername">Username</label>
+                 <form method="POST" action="{{ path('login') }}"  class= "loginForm">
+                <h3 class="h3 mb-3 font-weight-normal">Login</h3>
+
+                     <div class= "mb-3">
+                <label class ="form-label required" for="inputUsername">Username</label>
                 <input type="text" value="{{ last_username }}" name="_username" id="username" class="form-control" autocomplete="username" required autofocus>
-                <label for="inputPassword" class= "formLabel2 position-relative">Password</label>
-                <input type="password" name="_password" id="password" class="formField2 form-control position-relative " autocomplete="current-password" required>
+                </div>
+
+                     <div class= "mb-3">
+                     <label class ="form-label required" for="inputPassword" class= "formLabel2 position-relative">Password</label>
+                         <input type="password" name="_password" id="password" class="formField2 form-control position-relative " autocomplete="current-password" required>
+                     </div>
 
                      <button class="subButton btn btn-lg btn-primary position-relative" type="submit">Sign in</button>
 
-                <input type="hidden" name="_target_path" value="/">
+                     <p class= "text2 position-relative">Don't have a account yet? Register &nbsp<a class= "link1 position-relative" href="{{ path('register') }}">here</a></p>
+
+                <input type="hidden" name="_target_path" value="/redirect/">
 
             </form>
         </div>

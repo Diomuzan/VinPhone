@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VinPhone - Register{% endblock %}
+
+{% block body %}
+
+    <div class= "card5 position-relative">
+        <div class="card-body">
+            <h3 class="heading1 h3 mb-3 font-weight-normal position-relative">Register</h3>
+
+    {{ form_errors(registrationForm) }}
+
+    {{ form_start(registrationForm, {'attr': {'class': 'registerForm position-relative'}}) }}
+        {{ form_row(registrationForm.username) }}
+        {{ form_row(registrationForm.plainPassword, {label: 'Password'}) }}
+            <button type="submit" class="button4 btn btn-lg btn-primary  position-relative">Register</button>
+    {{ form_end(registrationForm) }}
+        </div>
+    </div>
+
+    <footer class="footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative">
+        <div class="col-md-4 d-flex align-items-center">
+            <span class="text1 mb-3 mb-md-0 text-body-secondary position-relative">© 2024 VinPhone</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a href="{{ asset('https://www.facebook.com') }}"><img class= "FBLogo position-relative" src="{{ asset('/pictures/fb_logo.png') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.instagram.com') }}"><img class= "IGLogo position-relative" src="{{ asset('/pictures/ig_logo.png') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.twitter.com') }}"><img class= "XLogo position-relative" src="{{ asset('/pictures/x_logo.jpg') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.tiktok.com') }}"><img class= "TTLogo position-relative" src="{{ asset('/pictures/tt_logo.png') }}"></a></li>
+        </ul>
+    </footer>
+{% endblock %}

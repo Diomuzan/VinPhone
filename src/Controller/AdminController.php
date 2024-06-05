@@ -9,19 +9,17 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-class AdminController extends AbstractController {
 
-    #[Route('/admin/dashboard/{id}', name: 'admin_dashboard')]
-    public function admin_home(PhoneRepository $phoneRepository, string $id, EntityManagerInterface $entityManager): Response {
+class AdminController extends AbstractController {
+    #[Route('/admin/dashboard', name: 'admin_dashboard')]
+    public function admin_dashboard(PhoneRepository $phoneRepository, EntityManagerInterface $entityManager): Response {
         $phones = $phoneRepository->findAll();
 
         $user = $this->getUser();
         $account = $user ? $user->getUserIdentifier() : '';
 
-        return $this->render('admin_home.html.twig', ['phones' => $phones, 'account' => $account]);
+        return $this->render('admin_dashboard.html.twig', ['phones' => $phones, 'account' => $account]);
     }
-
-
     #[Route('/admin/add', name: 'add', methods: ['GET', 'POST'])]
     public function new(Request $request, PhoneRepository $phoneRepository): Response {
 
@@ -32,7 +30,7 @@ class AdminController extends AbstractController {
         if ($form->isSubmitted() && $form->isValid()) {
             $phoneRepository->save($phones, true);
 
-            return $this->redirectToRoute('AdminHome', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin_dashboard', [], Response::HTTP_SEE_OTHER);
         }
         return $this->render('add.html.twig', ['phones' => $phones, 'form' => $form]);
     }
@@ -49,6 +47,6 @@ class AdminController extends AbstractController {
      $entityManager->remove($phone);
      $entityManager->flush();
 
-        return $this->redirectToRoute('AdminHome', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('admin_dashboard', [], Response::HTTP_SEE_OTHER);
     }
 }

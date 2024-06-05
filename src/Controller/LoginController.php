@@ -15,7 +15,7 @@ class LoginController extends AbstractController {
         $lastUsername = $authenticationUtils->getLastUsername();
         return $this->render('login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
     }
-    #[Route('/', name: "app_home")]
+    #[Route('/redirect', name: "redirect")]
     public function redirectAction(Security $security) {
         if ($security->isGranted('ROLE_ADMIN')) {
             return $this->redirectToRoute('admin_dashboard');
@@ -23,7 +23,11 @@ class LoginController extends AbstractController {
         if ($security->isGranted('ROLE_MEMBER')) {
             return $this->redirectToRoute('member_dashboard');
         }
-        return $this->render('home.html.twig');
+        return $this->redirectToRoute('home');
+    }
+    #[Route('/logout', name: "logout")]
+    public function logout(): Response {
+        throw new \Exception('Don\'t forget to activate logout in security.yaml');
     }
 }
 

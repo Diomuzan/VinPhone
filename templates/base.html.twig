@@ -25,10 +25,14 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="navItem1 nav-item position-relative">
-                            <a class="navLink1 nav-link position-relative" aria-current="page" href="{{ path('home') }}">Home</a>
+                            <a class="navLink1 nav-link position-relative" href="{{ path('home') }}">Home</a>
                         </li>
                         <li class="navItem2 nav-item position-relative">
-                            <a class=" nav-link position-relative" href="{{ path('login') }}">Login</a>
+                            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                                <a class="navLink2 nav-link position-relative" href="{{ path('logout') }}">Logout</a>
+                            {% else %}
+                                <a class="navLink2 nav-link position-relative" href="{{ path('login') }}">Login</a>
+                            {% endif %}
                         </li>
                     </ul>
                 </div>
