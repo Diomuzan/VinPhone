@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="DDDA8595-2507-423E-D2DF-99DDD12E1E1F" mainViewID="16B2347C-9765-9AAC-A689-62A4AF423764">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:11:21 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8CE2877A-90D4-6FAE-AA83-7335BF2BAB8B" name="PHONE">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:14:07 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<engineerTo>
+<item key="A59C58AF-3226-1322-CB17-DB9AE847C6D9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ID" id="F01BA27A-47BB-DCA6-242B-06ED39CFADE7">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:17:58 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<engineerTo>
+<item key="A59C58AF-3226-1322-CB17-DB9AE847C6D9" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="brand" id="9C056A87-F9BE-2725-787A-299FF8A17711">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:18:01 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<engineerTo>
+<item key="A59C58AF-3226-1322-CB17-DB9AE847C6D9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="price" id="66D75683-CB92-DD5D-CB9A-7DADF5791F74">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:18:08 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<engineerTo>
+<item key="A59C58AF-3226-1322-CB17-DB9AE847C6D9" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="56761D80-6186-3FFA-766C-BE98F68C2512" name="PHONE PK">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:22:04 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="A59C58AF-3226-1322-CB17-DB9AE847C6D9" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F01BA27A-47BB-DCA6-242B-06ED39CFADE7</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

@@ -1,0 +1,64 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="FE8BFBC1-A51E-6294-A9A6-7EB9071BF712" name="PHONE">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>8CE2877A-90D4-6FAE-AA83-7335BF2BAB8B</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="C547F9DA-2C32-D7C1-DFF3-1FB557C6F86F">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>F01BA27A-47BB-DCA6-242B-06ED39CFADE7</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="brand" id="2C6D21EC-80BA-CF69-A591-7DAF01B93488">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>9C056A87-F9BE-2725-787A-299FF8A17711</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="price" id="34728CAF-AA25-4210-6F21-27FAECE8B25D">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>66D75683-CB92-DD5D-CB9A-7DADF5791F74</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8CD4022B-F402-CB70-1ECD-A61292F6777C" name="PHONE_PK">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>56761D80-6186-3FFA-766C-BE98F68C2512</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C547F9DA-2C32-D7C1-DFF3-1FB557C6F86F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

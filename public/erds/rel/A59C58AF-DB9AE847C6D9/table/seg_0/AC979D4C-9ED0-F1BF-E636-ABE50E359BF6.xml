@@ -1,0 +1,52 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AC979D4C-9ED0-F1BF-E636-ABE50E359BF6" name="ADMIN">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>E78030B5-E5E1-D165-2E8C-D0DD667AA0D5</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID" id="AB7C9CB7-F636-F548-3063-C3D47AAE6CEF">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>4718CC17-2ED0-B59B-3F7D-33E09C8B750A</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48DF9CA2-81C8-9EA4-F1D5-8F4E6DDB0D3E" referredColumn="4ADA5165-7A2C-9420-BDF8-7D877A6E6E95"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8EB5BDC7-2AD4-80A5-E0B7-855328C5CD62" name="ADMIN_PK">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>0DD9F339-D3B3-4F0E-2341-9BE569D45DAE</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB7C9CB7-F636-F548-3063-C3D47AAE6CEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DC338E19-D795-827B-9839-080A5B6D5BD4" name="ADMIN_USER_FK">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<generatorID>A7CCB9DA-4372-D5AC-6FFC-297AEC3BED35</generatorID>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AB7C9CB7-F636-F548-3063-C3D47AAE6CEF"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
