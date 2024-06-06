@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<ProcessModel class="oracle.dbtools.crest.model.design.process.ProcessModel" name="Process Model" id="786E557C-F5EB-8639-B5E8-94092897E5C2">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:11:22 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</ProcessModel>

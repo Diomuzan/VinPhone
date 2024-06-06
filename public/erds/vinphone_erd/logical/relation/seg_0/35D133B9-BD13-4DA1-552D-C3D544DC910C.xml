@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="Relation_3" directorySegmentName="seg_0" id="35D133B9-BD13-4DA1-552D-C3D544DC910C">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:50:28 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<engineerTo>
+<item key="A59C58AF-3226-1322-CB17-DB9AE847C6D9" value="true"/>
+</engineerTo>
+<sourcePk>56761D80-6186-3FFA-766C-BE98F68C2512</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>8CE2877A-90D4-6FAE-AA83-7335BF2BAB8B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>0037544E-0A59-7A30-9A4E-A02BB19BB83D</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

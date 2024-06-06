@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.InheritanceRelation" name="Hierarchy_1" directorySegmentName="seg_0" id="C3FF8D48-113E-4011-FE8E-A13F294924B3">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:24:52 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<engineerTo>
+<item key="A59C58AF-3226-1322-CB17-DB9AE847C6D9" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>Super Type</nameOnSource>
+<nameOnTarget>Sub Type</nameOnTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
+<sourceEntity>0037544E-0A59-7A30-9A4E-A02BB19BB83D</sourceEntity>
+<targetEntity>0C4B0415-083B-8173-79BB-EE9224C826CF</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

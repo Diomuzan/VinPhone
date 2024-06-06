@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="vinphone_erd" id="55736169-ED56-3809-A38B-484EECF9CB99" version="3.5">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:11:21 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>55736169-ED56-3809-A38B-484EECF9CB99</designId>
+</OSDM_Design>

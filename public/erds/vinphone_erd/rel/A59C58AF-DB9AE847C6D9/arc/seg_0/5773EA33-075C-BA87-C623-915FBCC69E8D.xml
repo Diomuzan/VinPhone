@@ -1,0 +1,13 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKArc class="oracle.dbtools.crest.model.design.relational.FKArc" directorySegmentName="seg_0" id="5773EA33-075C-BA87-C623-915FBCC69E8D" name="FKArc_1">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:51:38 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<mandatory>false</mandatory>
+<reverseArc>true</reverseArc>
+<table>B87F5C7E-A459-9B84-E3FF-5B316057737A</table>
+<fkeys>
+<fkeyID>46297169-F883-EC63-83C8-6BA1BDA1FCE2</fkeyID>
+<fkeyID>48DF9CA2-81C8-9EA4-F1D5-8F4E6DDB0D3E</fkeyID>
+</fkeys>
+</FKArc>
