@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 05. Jun 2024 um 18:13
+-- Erstellungszeit: 07. Jun 2024 um 19:01
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -74,6 +74,21 @@ CREATE TABLE `phone` (
   `model` varchar(255) NOT NULL,
   `price` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Daten für Tabelle `phone`
+--
+
+INSERT INTO `phone` (`id`, `user_id_id`, `brand`, `model`, `price`) VALUES
+(1, 4, 'Samsung', 'SGH-P300', '€60,00'),
+(2, 4, 'LG', 'Chocolate', '€20,00'),
+(3, 4, 'Nokia', 'N-Gage', '€80,00'),
+(4, 4, 'Samsung', 'SGH-F300', '€100,00'),
+(5, 4, 'Samsung', 'M7600 Beat DJ', '€20,00'),
+(6, 3, 'Nokia', '3310', '€10,00'),
+(7, 3, 'Motorola', 'Razr', '€25,00'),
+(8, 3, 'Motorola', 'Aura R1', '€2000,00'),
+(9, 3, 'Samsung', 'SGH-i900 Omnia', '€20,00');
 
 -- --------------------------------------------------------
 
@@ -146,7 +161,7 @@ ALTER TABLE `messenger_messages`
 -- AUTO_INCREMENT für Tabelle `phone`
 --
 ALTER TABLE `phone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
