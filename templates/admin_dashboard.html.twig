@@ -1,9 +1,8 @@
 {% extends "base.html.twig" %}
 
-{% block title %}VinPhone - Admin Home{% endblock %}
+{% block title %}VinPhone - Dashboard{% endblock %}
 
 {% block body %}
-
     {% for message in app.flashes('success') %}
         <div class="alert alert-success">
             {{ message }}
@@ -30,10 +29,10 @@
                     <td>{{ phone.model }}</td>
                     <td> {{ phone.price }}</td>
                   <td>
-                      |<a href="{{ path('edit', {'id': phone.id}) }}"><button type="button" class="btn btn-outline-warning">Edit</button></a>
-                      |<a href="{{ path('delete', {'id': phone.id}) }}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+                      <a href="{{ path('edit', {'id': phone.id}) }}"><button type="button" class="btn btn-outline-warning">Edit</button></a>
+                      <a href="{{ path('delete', {'id': phone.id}) }}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
+                  </td>
                 </tbody>
-                </td>
                 </tr>
                 {% endfor %}
             </table>

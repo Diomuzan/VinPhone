@@ -7,7 +7,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use Twig\Environment;
 
-class GuestController extends AbstractController {
+class VinPhoneController extends AbstractController {
     #[Route('/home', name: 'home')]
     public function guest_home(): Response {
         return $this->render('home.html.twig');
