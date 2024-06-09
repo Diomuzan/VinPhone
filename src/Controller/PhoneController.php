@@ -40,7 +40,7 @@ class PhoneController extends AbstractController {
 
             return $this->redirectToRoute('admin_dashboard', [], Response::HTTP_SEE_OTHER);
         }
-        return $this->render('add.html.twig', ['phones' => $phones, 'form' => $form]);
+        return $this->render('admin_dashboard_new.html.twig', ['phones' => $phones, 'form' => $form]);
     }
     #[Route('admin/detail/{id}', name: 'phone_detail', methods: ['GET'])]
     public function show(Phone $phone): Response {
