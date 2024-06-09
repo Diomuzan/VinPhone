@@ -2,7 +2,7 @@
 namespace App\Controller;
 use App\Entity\Phone;
 use App\Form\AddPhoneType;
-use App\Form\PhoneType;
+use App\Form\EditPhoneType;
 use App\Repository\PhoneRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -42,24 +42,23 @@ class PhoneController extends AbstractController {
         }
         return $this->render('add.html.twig', ['phones' => $phones, 'form' => $form]);
     }
-    #[Route('admin/detail/{id}', name: 'detail', methods: ['GET'])]
+    #[Route('admin/detail/{id}', name: 'phone_detail', methods: ['GET'])]
     public function show(Phone $phone): Response {
         return $this->render('detail.html.twig', ['phone' => $phone,]);
     }
-    #[Route('admin/edit/{id}', name: 'edit', methods: ['GET', 'POST'])]
+    #[Route('admin/edit/{id}', name: 'phone_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, Phone $phone, EntityManagerInterface $entityManager): Response {
-        $form = $this->createForm(PhoneType::class, $phone);
+        $form = $this->createForm(EditPhoneType::class, $phone);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_phone_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('admin_dashboard', [], Response::HTTP_SEE_OTHER);
         }
-
-        return $this->render('edit.html.twig', ['phone' => $phone, 'form' => $form,]);
+        return $this->render('phone_edit.html.twig', ['phone' => $phone, 'form' => $form,]);
     }
-    #[Route('/admin/delete/{id}', name: 'delete')]
+    #[Route('/admin/delete/{id}', name: 'phone_delete')]
     public function delete(Request $request, Phone $phone, PhoneRepository $phoneRepository, EntityManagerInterface $entityManager, $id): Response {
         $phone = $entityManager->getRepository(Phone::class)->find($id);
 
