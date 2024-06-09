@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 07. Jun 2024 um 19:01
+-- Erstellungszeit: 09. Jun 2024 um 16:20
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -88,7 +88,8 @@ INSERT INTO `phone` (`id`, `user_id_id`, `brand`, `model`, `price`) VALUES
 (6, 3, 'Nokia', '3310', '€10,00'),
 (7, 3, 'Motorola', 'Razr', '€25,00'),
 (8, 3, 'Motorola', 'Aura R1', '€2000,00'),
-(9, 3, 'Samsung', 'SGH-i900 Omnia', '€20,00');
+(9, 3, 'Samsung', 'SGH-i900 Omnia', '€20,00'),
+(10, 3, 'LG', 'Prada', '€50,00');
 
 -- --------------------------------------------------------
 
@@ -161,7 +162,7 @@ ALTER TABLE `messenger_messages`
 -- AUTO_INCREMENT für Tabelle `phone`
 --
 ALTER TABLE `phone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`

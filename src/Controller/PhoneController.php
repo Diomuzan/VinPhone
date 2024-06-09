@@ -31,7 +31,6 @@ class PhoneController extends AbstractController {
     }
     #[Route('/admin/add', name: 'add', methods: ['GET', 'POST'])]
     public function new(Request $request, PhoneRepository $phoneRepository): Response {
-
         $phones = new Phone();
         $form = $this->createForm(AddPhoneType::class, $phones);
         $form->handleRequest($request);
@@ -60,10 +59,8 @@ class PhoneController extends AbstractController {
 
         return $this->render('edit.html.twig', ['phone' => $phone, 'form' => $form,]);
     }
-
     #[Route('/admin/delete/{id}', name: 'delete')]
     public function delete(Request $request, Phone $phone, PhoneRepository $phoneRepository, EntityManagerInterface $entityManager, $id): Response {
-
         $phone = $entityManager->getRepository(Phone::class)->find($id);
 
         if(!$phone) {
