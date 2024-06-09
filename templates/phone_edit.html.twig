@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}VinPhone - Edit{% endblock %}
+
+{% block body %}
+    <div class="card card6 position-relative">
+        <div class="card-body">
+            <h1>Edit</h1>
+            <form method= "POST" class= "form2 position-relative">
+                {{ form_start(form) }}
+                {{ form_widget(form.submit, {'attr': {'class': 'button5 btn btn-outline-primary position-relative'}}) }}
+                {{ form_end(form) }}
+            </form>
+        </div>
+    </div>
+
+    <a class="button6 btn btn-outline-primary position-relative" href="{{ path('admin_dashboard') }}">Return</a>
+
+    <footer class="footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative">
+        <div class="col-md-4 d-flex align-items-center">
+            <span class="text1 mb-3 mb-md-0 text-body-secondary position-relative">© 2024 VinPhone</span>
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a href="{{ asset('https://www.facebook.com') }}"><img class= "FBLogo position-relative" src="{{ asset('/pictures/fb_logo.png') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.instagram.com') }}"><img class= "IGLogo position-relative" src="{{ asset('/pictures/ig_logo.png') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.twitter.com') }}"><img class= "XLogo position-relative" src="{{ asset('/pictures/x_logo.jpg') }}"></a></li>
+            <li class="ms-3"><a href="{{ asset('https://www.tiktok.com') }}"><img class= "TTLogo position-relative" src="{{ asset('/pictures/tt_logo.png') }}"></a></li>
+        </ul>
+    </footer>
+{% endblock %}
