@@ -16,7 +16,7 @@ html, body {
     margin-right: 0;
 }
 
-.text1 {
+.heading2 {
     left: 101px;
 }
 
@@ -178,6 +178,11 @@ html, body {
     border-radius: 20px;
     margin-right: 0;
 }
+
+.heading3 {
+    left: 101px;
+}
+
 
 
 

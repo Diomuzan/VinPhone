@@ -3,11 +3,15 @@
 {% block title %}VinPhone - User manager{% endblock %}
 
 {% block body %}
-
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
 
     <div class= "card7 card position-relative">
         <div class= "card-body">
-            <h1 class= "text1 position-relative">User manager</h1>
+            <h1 class= "heading3 position-relative">User manager</h1>
     <table class="table">
         <thead>
             <tr>
