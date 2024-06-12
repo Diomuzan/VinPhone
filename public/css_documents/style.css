@@ -1,0 +1,198 @@
+html, body {
+    background-image: url("/Pictures/Wallpaper.webp");
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+.card {
+    overflow-x: hidden;
+}
+
+.card1 {
+    height: 500px;
+    width: 550px;
+    top: 205px;
+    left: 380px;
+    border-radius: 20px;
+    margin-right: 0;
+}
+
+.heading2 {
+    left: 101px;
+}
+
+.btn-outline-info:hover {
+    color: white;
+}
+
+.button1 {
+    top: 21px;
+    left: 327px;
+}
+
+.card2 {
+    width: 1000px;
+    height: 500px;
+    border-radius: 30px;
+    top: 205px;
+    left: 137px;
+}
+
+.nbLogo {
+    left: 600px;
+    margin: 0;
+}
+
+.navItem1 {
+    left: 200px;
+}
+
+.navItem2 {
+    left: 780px;
+}
+
+.footer {
+    background-color: white;
+    top: 800px;
+}
+
+.FBLogo {
+    height: 35px;
+    width: 35px;
+    left: -60px;
+    border-radius: 8px;
+}
+
+.IGLogo {
+    height: 38px;
+    width: 38px;
+    left: -50px;
+}
+
+.XLogo {
+    height: 35px;
+    width: 35px;
+    left: -40px;
+    border-radius: 8px;
+}
+
+.TTLogo {
+    height: 35px;
+    width: 35px;
+    left: -30px;
+}
+
+.card3 {
+    top: 150px;
+    height: 200px;
+}
+
+.footer {
+    background-color: white;
+}
+
+.card4 {
+    height: 400px;
+    border-radius: 30px;
+    top: 205px;
+}
+
+.button2 {
+    top: 40px;
+}
+
+.formLabel2 {
+    top: 10px;
+}
+
+.button3 {
+    top: 385px;
+    left: 450px;
+}
+
+.form1 {
+    top: -20px;
+}
+
+.subButton {
+    top: 40px;
+}
+
+.text2 {
+    top: 64px;
+}
+
+.card5 {
+    background-color: white;
+    height: 400px;
+    border-radius: 30px;
+    top: 205px;
+}
+
+.button4 {
+    top: 67px;
+    left: 1px;
+}
+
+.registerForm {
+    width: 1253px;
+    top: 20px;
+    left: 14px;
+}
+
+.heading1 {
+    top: 20px;
+    left: 14px;
+}
+
+.link1 {
+    left: -4px;
+}
+
+.button5 {
+    top: 412px;
+    left: 1px;
+}
+
+.card6 {
+    background-color: white;
+    height: 550px;
+    border-radius: 30px;
+    top: 205px;
+}
+
+.button6 {
+    top: 140px;
+    left: 100px;
+}
+
+.button7 {
+    top: -33px;
+    left: 206px;
+}
+
+.card7 {
+    height: 1000px;
+    width: 1100px;
+    top: 205px;
+    left: 92px;
+    border-radius: 20px;
+    margin-right: 0;
+}
+
+.heading3 {
+    left: 101px;
+}
+
+.button8 {
+    top: 133px;
+    left: 505px;
+}
+
+
+
+
+
+
+
+
+

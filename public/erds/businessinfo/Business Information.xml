@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="623CFD55-6CD8-6B17-D58F-28AFDAF5C220">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:11:22 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="E78030B5-E5E1-D165-2E8C-D0DD667AA0D5" name="ADMIN">
+<createdBy>rizot</createdBy>
+<createdTime>2024-06-06 09:25:23 UTC</createdTime>
+<ownerDesignName>vinphone_erd</ownerDesignName>
+<engineerTo>
+<item key="A59C58AF-3226-1322-CB17-DB9AE847C6D9" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<hierarchicalParent>0037544E-0A59-7A30-9A4E-A02BB19BB83D</hierarchicalParent>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+</Entity>

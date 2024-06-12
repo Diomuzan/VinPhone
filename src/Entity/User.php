@@ -1,13 +1,15 @@
 <?php
-
 namespace App\Entity;
-
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
+#[UniqueEntity(fields: ['username'], message: 'There is already an account with this username')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -18,26 +20,45 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column(length: 180, unique: true)]
     private ?string $username = null;
 
-    #[ORM\Column]
+    #[ORM\Column(type: 'json')]
     private array $roles = [];
 
+    #[ORM\Column(type: 'string')]
+    private string $password;
+
+    #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Phone::class, orphanRemoval: true)]
+    private Collection $user_phone;
+
     /**
-     * @var string The hashed password
+     * @var Collection<int, News>
      */
-    #[ORM\Column]
-    private ?string $password = null;
+    #[ORM\ManyToMany(targetEntity: News::class, mappedBy: 'news_user')]
+    private Collection $user_news;
+
+    public function __construct()
+    {
+        $this->user_phone = new ArrayCollection();
+        $this->user_news = new ArrayCollection();
+    }
+    
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getUsername(): ?string
+    public function getUsername(): string
     {
         return $this->username;
     }
 
-    public function setUsername(string $username): self
+    public function __toString(): string
+    {
+        return $this->getUsername();
+    }
+
+
+    public function setUsername(string $username): static
     {
         $this->username = $username;
 
@@ -60,13 +81,12 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function getRoles(): array
     {
         $roles = $this->roles;
-        // guarantee every user at least has ROLE_USER
         $roles[] = 'ROLE_MEMBER';
 
         return array_unique($roles);
     }
 
-    public function setRoles(array $roles): self
+    public function setRoles(array $roles): static
     {
         $this->roles = $roles;
 
@@ -74,8 +94,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
+     * @see UserInterface
+     */
+    public function eraseCredentials(): void
+    {
+        // If you store any temporary, sensitive data on the user, clear it here
+        // $this->plainPassword = null;
+    }
+
+    /**
      * @see PasswordAuthenticatedUserInterface
      */
+
     public function getPassword(): string
     {
         return $this->password;
@@ -89,11 +119,30 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     }
 
     /**
-     * @see UserInterface
+     * @return Collection<int, News>
      */
-    public function eraseCredentials()
+    public function getUserNews(): Collection
     {
-        // If you store any temporary, sensitive data on the user, clear it here
-        // $this->plainPassword = null;
+        return $this->user_news;
     }
+
+    public function addUserNews(News $userNews): static
+    {
+        if (!$this->user_news->contains($userNews)) {
+            $this->user_news->add($userNews);
+            $userNews->addNewsUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserNews(News $userNews): static
+    {
+        if ($this->user_news->removeElement($userNews)) {
+            $userNews->removeNewsUser($this);
+        }
+
+        return $this;
+    }
+
 }
