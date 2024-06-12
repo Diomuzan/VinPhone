@@ -29,9 +29,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'user_id', targetEntity: Phone::class, orphanRemoval: true)]
     private Collection $user_phone;
 
+    /**
+     * @var Collection<int, News>
+     */
+    #[ORM\ManyToMany(targetEntity: News::class, mappedBy: 'news_user')]
+    private Collection $user_news;
+
     public function __construct()
     {
         $this->user_phone = new ArrayCollection();
+        $this->user_news = new ArrayCollection();
     }
     
 
@@ -107,6 +114,33 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setPassword(string $password): self
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, News>
+     */
+    public function getUserNews(): Collection
+    {
+        return $this->user_news;
+    }
+
+    public function addUserNews(News $userNews): static
+    {
+        if (!$this->user_news->contains($userNews)) {
+            $this->user_news->add($userNews);
+            $userNews->addNewsUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeUserNews(News $userNews): static
+    {
+        if ($this->user_news->removeElement($userNews)) {
+            $userNews->removeNewsUser($this);
+        }
 
         return $this;
     }
