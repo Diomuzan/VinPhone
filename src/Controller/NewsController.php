@@ -9,12 +9,18 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 class NewsController extends AbstractController {
-    #[Route('/news', name: 'news', methods: ['GET'])]
-    public function index(NewsRepository $newsRepository): Response {
+    #[Route('/admin/news', name: 'news', methods: ['GET'])]
+    public function admin_news(NewsRepository $newsRepository): Response {
         return $this->render('admin_news.html.twig', ['news' => $newsRepository->findAll(),]);
     }
 
-    #[Route('/news/new', name: 'news_new', methods: ['GET', 'POST'])]
+    #[Route('/member/news', name: 'news', methods: ['GET'])]
+    public function member_news(NewsRepository $newsRepository): Response {
+        return $this->render('member_news.html.twig', ['news' => $newsRepository->findAll(),]);
+    }
+
+
+    #[Route('admin/news/new', name: 'news_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response {
         $news = new News();
         $form = $this->createForm(NewsType::class, $news);
@@ -33,7 +39,7 @@ class NewsController extends AbstractController {
         return $this->render('news_detail.html.twig', ['news' => $news,]);
     }
 
-    #[Route('news/edit/{id}', name: 'news_edit', methods: ['GET', 'POST'])]
+    #[Route('admin/news/edit/{id}', name: 'news_edit', methods: ['GET', 'POST'])]
     public function edit(Request $request, News $news, EntityManagerInterface $entityManager): Response {
         $form = $this->createForm(NewsType::class, $news);
         $form->handleRequest($request);

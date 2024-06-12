@@ -7,14 +7,13 @@
 
     <table class="table">
         <thead>
-            <tr>
-                <th>ID</th>
-                <th>Date</th>
-                <th>Title</th>
-                <th>Description</th>
-                <th>Role</th>
-                <th>Actions</th>
-            </tr>
+        <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Role</th>
+        </tr>
         </thead>
         <tbody>
         {% for news in news %}
@@ -26,8 +25,6 @@
                 <td>{{ news.role ? news.role|json_encode : '' }}</td>
                 <td>
                     <a class= "btn btn-outline-info" href="{{ path('news_detail', {'id': news.id}) }}">Detail</a>
-                    <a class= "btn btn-outline-warning" href="{{ path('news_edit', {'id': news.id}) }}">Edit</a>
-                    <a class= "btn btn-outline-warning" href="{{ path('news_delete', {'id': news.id}) }}">Delete</a>
                 </td>
             </tr>
         {% else %}
@@ -38,8 +35,6 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a class= "btn btn-outline-success" href="{{ path('news_new') }}">New</a>
 
     <footer class="footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative">
         <div class="col-md-4 d-flex align-items-center">
