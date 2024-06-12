@@ -9,17 +9,15 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 class NewsController extends AbstractController {
-    #[Route('/admin/news', name: 'news', methods: ['GET'])]
+    #[Route('/admin/news', name: 'admin_news', methods: ['GET'])]
     public function admin_news(NewsRepository $newsRepository): Response {
         return $this->render('admin_news.html.twig', ['news' => $newsRepository->findAll(),]);
     }
 
-    #[Route('/member/news', name: 'news', methods: ['GET'])]
+    #[Route('/member/news', name: 'member_news', methods: ['GET'])]
     public function member_news(NewsRepository $newsRepository): Response {
         return $this->render('member_news.html.twig', ['news' => $newsRepository->findAll(),]);
     }
-
-
     #[Route('admin/news/new', name: 'news_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response {
         $news = new News();

@@ -931,7 +931,6 @@ Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inl
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service "maker.maker.make_webhook" to "maker.auto_command.make_webhook".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.mXDaS5b" to ".service_locator.mXDaS5b.App\Controller\LoginController::login()".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.uBR2pyw" to ".service_locator.uBR2pyw.App\Controller\LoginController::redirectAction()".
-Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.WUzs2TX" to ".service_locator.WUzs2TX.App\Controller\NewsController::index()".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.q9gYYmg" to ".service_locator.q9gYYmg.App\Controller\NewsController::show()".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.nbonErD" to ".service_locator.nbonErD.App\Controller\PhoneController::admin_dashboard()".
 Symfony\Component\DependencyInjection\Compiler\InlineServiceDefinitionsPass: Inlined service ".service_locator.Ji5OBMP" to ".service_locator.Ji5OBMP.App\Controller\PhoneController::new()".

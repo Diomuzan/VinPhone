@@ -447,7 +447,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.96wQ8SZ"/>
+      <argument type="service" id=".service_locator.BtvPlLa"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -3338,7 +3338,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.96wQ8SZ"/>
+      <argument type="service" id=".service_locator.BtvPlLa"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -7833,9 +7833,15 @@
         <argument key="newsRepository" type="service_closure" id="App\Repository\NewsRepository"/>
       </argument>
     </service>
-    <service id=".service_locator.WUzs2TX.App\Controller\NewsController::index()" class="Symfony\Component\DependencyInjection\ServiceLocator">
-      <tag name="container.service_locator_context" id="App\Controller\NewsController::index()"/>
-      <argument>App\Controller\NewsController::index()</argument>
+    <service id=".service_locator.WUzs2TX.App\Controller\NewsController::admin_news()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\NewsController::admin_news()"/>
+      <argument>App\Controller\NewsController::admin_news()</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.WUzs2TX" method="withContext"/>
+    </service>
+    <service id=".service_locator.WUzs2TX.App\Controller\NewsController::member_news()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\NewsController::member_news()"/>
+      <argument>App\Controller\NewsController::member_news()</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.WUzs2TX" method="withContext"/>
     </service>
@@ -8002,14 +8008,15 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.q60ydOj" method="withContext"/>
     </service>
-    <service id=".service_locator.96wQ8SZ" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.BtvPlLa" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\LoginController::login" type="service_closure" id=".service_locator.mXDaS5b.App\Controller\LoginController::login()"/>
         <argument key="App\Controller\LoginController::redirectAction" type="service_closure" id=".service_locator.uBR2pyw.App\Controller\LoginController::redirectAction()"/>
+        <argument key="App\Controller\NewsController::admin_news" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::admin_news()"/>
         <argument key="App\Controller\NewsController::delete" type="service_closure" id=".service_locator.nQDDdtL.App\Controller\NewsController::delete()"/>
         <argument key="App\Controller\NewsController::edit" type="service_closure" id=".service_locator.nQDDdtL.App\Controller\NewsController::edit()"/>
-        <argument key="App\Controller\NewsController::index" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::index()"/>
+        <argument key="App\Controller\NewsController::member_news" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::member_news()"/>
         <argument key="App\Controller\NewsController::new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\NewsController::new()"/>
         <argument key="App\Controller\NewsController::show" type="service_closure" id=".service_locator.q9gYYmg.App\Controller\NewsController::show()"/>
         <argument key="App\Controller\PhoneController::admin_dashboard" type="service_closure" id=".service_locator.nbonErD.App\Controller\PhoneController::admin_dashboard()"/>
@@ -8029,9 +8036,10 @@
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.4wc4Ag1.kernel::registerContainerConfiguration()"/>
         <argument key="App\Controller\LoginController:login" type="service_closure" id=".service_locator.mXDaS5b.App\Controller\LoginController::login()"/>
         <argument key="App\Controller\LoginController:redirectAction" type="service_closure" id=".service_locator.uBR2pyw.App\Controller\LoginController::redirectAction()"/>
+        <argument key="App\Controller\NewsController:admin_news" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::admin_news()"/>
         <argument key="App\Controller\NewsController:delete" type="service_closure" id=".service_locator.nQDDdtL.App\Controller\NewsController::delete()"/>
         <argument key="App\Controller\NewsController:edit" type="service_closure" id=".service_locator.nQDDdtL.App\Controller\NewsController::edit()"/>
-        <argument key="App\Controller\NewsController:index" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::index()"/>
+        <argument key="App\Controller\NewsController:member_news" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::member_news()"/>
         <argument key="App\Controller\NewsController:new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\NewsController::new()"/>
         <argument key="App\Controller\NewsController:show" type="service_closure" id=".service_locator.q9gYYmg.App\Controller\NewsController::show()"/>
         <argument key="App\Controller\PhoneController:admin_dashboard" type="service_closure" id=".service_locator.nbonErD.App\Controller\PhoneController::admin_dashboard()"/>
@@ -10183,7 +10191,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.1W6W_dF" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.96wQ8SZ"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.BtvPlLa"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>

@@ -17,8 +17,9 @@ return [
         '/login' => [[['_route' => 'login', '_controller' => 'App\\Controller\\LoginController::login'], null, null, null, false, false, null]],
         '/redirect' => [[['_route' => 'redirect', '_controller' => 'App\\Controller\\LoginController::redirectAction'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'logout', '_controller' => 'App\\Controller\\LoginController::logout'], null, null, null, false, false, null]],
-        '/news' => [[['_route' => 'news', '_controller' => 'App\\Controller\\NewsController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/news/new' => [[['_route' => 'news_new', '_controller' => 'App\\Controller\\NewsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/news' => [[['_route' => 'admin_news', '_controller' => 'App\\Controller\\NewsController::admin_news'], null, ['GET' => 0], null, false, false, null]],
+        '/member/news' => [[['_route' => 'member_news', '_controller' => 'App\\Controller\\NewsController::member_news'], null, ['GET' => 0], null, false, false, null]],
+        '/admin/news/new' => [[['_route' => 'news_new', '_controller' => 'App\\Controller\\NewsController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/admin/dashboard' => [[['_route' => 'admin_dashboard', '_controller' => 'App\\Controller\\PhoneController::admin_dashboard'], null, null, null, false, false, null]],
         '/member/dashboard' => [[['_route' => 'member_dashboard', '_controller' => 'App\\Controller\\PhoneController::member_home'], null, null, null, false, false, null]],
         '/admin/add' => [[['_route' => 'add', '_controller' => 'App\\Controller\\PhoneController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -47,22 +48,20 @@ return [
                         .')'
                     .')'
                 .')'
-                .'|/news/(?'
-                    .'|de(?'
-                        .'|tail/([^/]++)(*:229)'
-                        .'|lete/([^/]++)(*:250)'
-                    .')'
-                    .'|edit/([^/]++)(*:272)'
+                .'|/news/de(?'
+                    .'|tail/([^/]++)(*:226)'
+                    .'|lete/([^/]++)(*:247)'
                 .')'
                 .'|/admin/(?'
+                    .'|news/edit/([^/]++)(*:284)'
                     .'|de(?'
-                        .'|tail/([^/]++)(*:309)'
-                        .'|lete/([^/]++)(*:330)'
+                        .'|tail/([^/]++)(*:310)'
+                        .'|lete/([^/]++)(*:331)'
                     .')'
-                    .'|edit/([^/]++)(*:352)'
+                    .'|edit/([^/]++)(*:353)'
                     .'|user\\-manager/(?'
-                        .'|edit/([^/]++)(*:390)'
-                        .'|delete/([^/]++)(*:413)'
+                        .'|edit/([^/]++)(*:391)'
+                        .'|delete/([^/]++)(*:414)'
                     .')'
                 .')'
             .')/?$}sDu',
@@ -76,14 +75,14 @@ return [
         168 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        229 => [[['_route' => 'news_detail', '_controller' => 'App\\Controller\\NewsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        250 => [[['_route' => 'app_news_delete', '_controller' => 'App\\Controller\\NewsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        272 => [[['_route' => 'news_edit', '_controller' => 'App\\Controller\\NewsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        309 => [[['_route' => 'phone_detail', '_controller' => 'App\\Controller\\PhoneController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        330 => [[['_route' => 'phone_delete', '_controller' => 'App\\Controller\\PhoneController::delete'], ['id'], null, null, false, true, null]],
-        352 => [[['_route' => 'phone_edit', '_controller' => 'App\\Controller\\PhoneController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        390 => [[['_route' => 'user_manager_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        413 => [
+        226 => [[['_route' => 'news_detail', '_controller' => 'App\\Controller\\NewsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        247 => [[['_route' => 'app_news_delete', '_controller' => 'App\\Controller\\NewsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
+        284 => [[['_route' => 'news_edit', '_controller' => 'App\\Controller\\NewsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        310 => [[['_route' => 'phone_detail', '_controller' => 'App\\Controller\\PhoneController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        331 => [[['_route' => 'phone_delete', '_controller' => 'App\\Controller\\PhoneController::delete'], ['id'], null, null, false, true, null]],
+        353 => [[['_route' => 'phone_edit', '_controller' => 'App\\Controller\\PhoneController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        391 => [[['_route' => 'user_manager_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        414 => [
             [['_route' => 'user_manager_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

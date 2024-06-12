@@ -165,17 +165,18 @@ class __TwigTemplate_bf9075922c1e1d0b0dc651b9f2623741 extends Template
         $context = array_intersect_key($context, $_parent) + $_parent;
         // line 39
         yield "            </table>
+
             <a href= \"";
-        // line 40
+        // line 41
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add");
         yield "\"><button type=\"button\" class=\"btn btn-outline-success button1 position-relative\">Add phone</button></a>
             <a href= \"";
-        // line 41
+        // line 42
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_manager");
         yield "\"><button type=\"button\" class=\"btn btn-outline-primary button7 position-relative\">User Manager</button></a>
             <a href= \"";
-        // line 42
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("news");
+        // line 43
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_news");
         yield "\"><button type=\"button\" class=\"btn btn-outline-primary button8 position-relative\">News</button></a>
         </div>
     </div>
@@ -186,25 +187,25 @@ class __TwigTemplate_bf9075922c1e1d0b0dc651b9f2623741 extends Template
         </div>
         <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">
             <li class=\"ms-3\"><a href=\"";
-        // line 51
+        // line 52
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.facebook.com"), "html", null, true);
         yield "\"><img class= \"FBLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/fb_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 52
+        // line 53
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.instagram.com"), "html", null, true);
         yield "\"><img class= \"IGLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/ig_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 53
+        // line 54
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.twitter.com"), "html", null, true);
         yield "\"><img class= \"XLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/x_logo.jpg"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 54
+        // line 55
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.tiktok.com"), "html", null, true);
         yield "\"><img class= \"TTLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/tt_logo.png"), "html", null, true);
@@ -242,7 +243,7 @@ class __TwigTemplate_bf9075922c1e1d0b0dc651b9f2623741 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  208 => 54,  202 => 53,  196 => 52,  190 => 51,  178 => 42,  174 => 41,  170 => 40,  167 => 39,  156 => 34,  152 => 33,  147 => 31,  143 => 30,  139 => 29,  136 => 28,  132 => 27,  120 => 17,  114 => 15,  112 => 14,  107 => 11,  98 => 8,  95 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  209 => 55,  203 => 54,  197 => 53,  191 => 52,  179 => 43,  175 => 42,  171 => 41,  167 => 39,  156 => 34,  152 => 33,  147 => 31,  143 => 30,  139 => 29,  136 => 28,  132 => 27,  120 => 17,  114 => 15,  112 => 14,  107 => 11,  98 => 8,  95 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -286,9 +287,10 @@ class __TwigTemplate_bf9075922c1e1d0b0dc651b9f2623741 extends Template
                 </tr>
                 {% endfor %}
             </table>
+
             <a href= \"{{ path('add') }}\"><button type=\"button\" class=\"btn btn-outline-success button1 position-relative\">Add phone</button></a>
             <a href= \"{{ path('user_manager') }}\"><button type=\"button\" class=\"btn btn-outline-primary button7 position-relative\">User Manager</button></a>
-            <a href= \"{{ path('news') }}\"><button type=\"button\" class=\"btn btn-outline-primary button8 position-relative\">News</button></a>
+            <a href= \"{{ path('admin_news') }}\"><button type=\"button\" class=\"btn btn-outline-primary button8 position-relative\">News</button></a>
         </div>
     </div>
 
