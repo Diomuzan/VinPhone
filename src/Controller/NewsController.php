@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Attribute\Route;
 class NewsController extends AbstractController {
     #[Route('/news', name: 'news', methods: ['GET'])]
     public function index(NewsRepository $newsRepository): Response {
-        return $this->render('news.html.twig', ['news' => $newsRepository->findAll(),]);
+        return $this->render('admin_news.html.twig', ['news' => $newsRepository->findAll(),]);
     }
 
     #[Route('/news/new', name: 'news_new', methods: ['GET', 'POST'])]

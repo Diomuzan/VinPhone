@@ -168,15 +168,15 @@ class __TwigTemplate_bf9075922c1e1d0b0dc651b9f2623741 extends Template
             <a href= \"";
         // line 40
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add");
-        yield "\"><button type=\"button\" class=\"button1 btn btn-outline-success position-relative\">Add phone</button></a>
+        yield "\"><button type=\"button\" class=\"btn btn-outline-success button1 position-relative\">Add phone</button></a>
             <a href= \"";
         // line 41
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_manager");
-        yield "\"><button type=\"button\" class=\"button7 btn btn-outline-primary position-relative\">User Manager</button></a>
+        yield "\"><button type=\"button\" class=\"btn btn-outline-primary button7 position-relative\">User Manager</button></a>
             <a href= \"";
         // line 42
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("news");
-        yield "\"><button type=\"button\" class=\"button8 btn btn-outline-primary position-relative\">News</button></a>
+        yield "\"><button type=\"button\" class=\"btn btn-outline-primary button8 position-relative\">News</button></a>
         </div>
     </div>
 
@@ -286,9 +286,9 @@ class __TwigTemplate_bf9075922c1e1d0b0dc651b9f2623741 extends Template
                 </tr>
                 {% endfor %}
             </table>
-            <a href= \"{{ path('add') }}\"><button type=\"button\" class=\"button1 btn btn-outline-success position-relative\">Add phone</button></a>
-            <a href= \"{{ path('user_manager') }}\"><button type=\"button\" class=\"button7 btn btn-outline-primary position-relative\">User Manager</button></a>
-            <a href= \"{{ path('news') }}\"><button type=\"button\" class=\"button8 btn btn-outline-primary position-relative\">News</button></a>
+            <a href= \"{{ path('add') }}\"><button type=\"button\" class=\"btn btn-outline-success button1 position-relative\">Add phone</button></a>
+            <a href= \"{{ path('user_manager') }}\"><button type=\"button\" class=\"btn btn-outline-primary button7 position-relative\">User Manager</button></a>
+            <a href= \"{{ path('news') }}\"><button type=\"button\" class=\"btn btn-outline-primary button8 position-relative\">News</button></a>
         </div>
     </div>
 
