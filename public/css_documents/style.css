@@ -25,8 +25,8 @@ html, body {
 }
 
 .button1 {
-    top: 20px;
-    left: 261px;
+    top: 21px;
+    left: 327px;
 }
 
 .card2 {
@@ -167,7 +167,7 @@ html, body {
 
 .button7 {
     top: -33px;
-    left: 157px;
+    left: 206px;
 }
 
 .card7 {
@@ -181,6 +181,11 @@ html, body {
 
 .heading3 {
     left: 101px;
+}
+
+.button8 {
+    top: 133px;
+    left: 505px;
 }
 
 

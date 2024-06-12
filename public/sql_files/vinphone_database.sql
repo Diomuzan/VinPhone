@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 09. Jun 2024 um 16:20
+-- Erstellungszeit: 12. Jun 2024 um 09:41
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -41,7 +41,8 @@ CREATE TABLE `doctrine_migration_versions` (
 --
 
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
-('DoctrineMigrations\\Version20240602162253', '2024-06-02 18:23:28', 144);
+('DoctrineMigrations\\Version20240602162253', '2024-06-02 18:23:28', 144),
+('DoctrineMigrations\\Version20240612074049', '2024-06-12 09:41:21', 200);
 
 -- --------------------------------------------------------
 
@@ -58,6 +59,33 @@ CREATE TABLE `messenger_messages` (
   `created_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `available_at` datetime NOT NULL COMMENT '(DC2Type:datetime_immutable)',
   `delivered_at` datetime DEFAULT NULL COMMENT '(DC2Type:datetime_immutable)'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `news`
+--
+
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news` (
+  `id` int(11) NOT NULL,
+  `date` date NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `description` longtext NOT NULL,
+  `role` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '(DC2Type:json)' CHECK (json_valid(`role`))
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Tabellenstruktur für Tabelle `news_user`
+--
+
+DROP TABLE IF EXISTS `news_user`;
+CREATE TABLE `news_user` (
+  `news_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -80,7 +108,6 @@ CREATE TABLE `phone` (
 --
 
 INSERT INTO `phone` (`id`, `user_id_id`, `brand`, `model`, `price`) VALUES
-(1, 4, 'Samsung', 'SGH-P300', '€60,00'),
 (2, 4, 'LG', 'Chocolate', '€20,00'),
 (3, 4, 'Nokia', 'N-Gage', '€80,00'),
 (4, 4, 'Samsung', 'SGH-F300', '€100,00'),
@@ -89,7 +116,8 @@ INSERT INTO `phone` (`id`, `user_id_id`, `brand`, `model`, `price`) VALUES
 (7, 3, 'Motorola', 'Razr', '€25,00'),
 (8, 3, 'Motorola', 'Aura R1', '€2000,00'),
 (9, 3, 'Samsung', 'SGH-i900 Omnia', '€20,00'),
-(10, 3, 'LG', 'Prada', '€50,00');
+(10, 3, 'LG', 'Prada', '€50,00'),
+(11, 4, 'Samsung', 'SGH-P300', '€60,00');
 
 -- --------------------------------------------------------
 
@@ -135,6 +163,20 @@ ALTER TABLE `messenger_messages`
   ADD KEY `IDX_75EA56E016BA31DB` (`delivered_at`);
 
 --
+-- Indizes für die Tabelle `news`
+--
+ALTER TABLE `news`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indizes für die Tabelle `news_user`
+--
+ALTER TABLE `news_user`
+  ADD PRIMARY KEY (`news_id`,`user_id`),
+  ADD KEY `IDX_584E20C2B5A459A0` (`news_id`),
+  ADD KEY `IDX_584E20C2A76ED395` (`user_id`);
+
+--
 -- Indizes für die Tabelle `phone`
 --
 ALTER TABLE `phone`
@@ -159,10 +201,16 @@ ALTER TABLE `messenger_messages`
   MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT für Tabelle `news`
+--
+ALTER TABLE `news`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT für Tabelle `phone`
 --
 ALTER TABLE `phone`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
@@ -173,6 +221,13 @@ ALTER TABLE `user`
 --
 -- Constraints der exportierten Tabellen
 --
+
+--
+-- Constraints der Tabelle `news_user`
+--
+ALTER TABLE `news_user`
+  ADD CONSTRAINT `FK_584E20C2A76ED395` FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `FK_584E20C2B5A459A0` FOREIGN KEY (`news_id`) REFERENCES `news` (`id`) ON DELETE CASCADE;
 
 --
 -- Constraints der Tabelle `phone`
