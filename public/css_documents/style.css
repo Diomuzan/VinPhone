@@ -8,7 +8,7 @@ html, body {
 }
 
 .card1 {
-    height: 500px;
+    height: 763px;
     width: 550px;
     top: 205px;
     left: 380px;
@@ -199,6 +199,35 @@ html, body {
 
 .heading4 {
     left: 6px;
+}
+
+.button9 {
+    top: 146px;
+    left: 580px;
+}
+
+.button10 {
+    top: 146px;
+    left: 610px;
+}
+
+.card9 {
+    height: 778px;
+    width: 1100px;
+    top: 299px;
+    left: 92px;
+    border-radius: 20px;
+    margin-right: 0;
+}
+
+.button11 {
+    top: 105px;
+    left: 564px;
+}
+
+.button12 {
+    top: 67px;
+    left: 464px;
 }
 
 

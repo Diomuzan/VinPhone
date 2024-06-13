@@ -47,7 +47,7 @@ class __TwigTemplate_da4d236c8ea0440d6c5346ba8b7e0364 extends Template
         // line 2
         yield $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 2, $this->source); })()), 'widget');
         yield "
-    <button class=\"btn\">";
+    <button class=\"button11 btn btn-outline-primary position-relative\">";
         // line 3
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(((array_key_exists("button_label", $context)) ? (Twig\Extension\CoreExtension::default((isset($context["button_label"]) || array_key_exists("button_label", $context) ? $context["button_label"] : (function () { throw new RuntimeError('Variable "button_label" does not exist.', 3, $this->source); })()), "Save")) : ("Save")), "html", null, true);
         yield "</button>
@@ -93,7 +93,7 @@ class __TwigTemplate_da4d236c8ea0440d6c5346ba8b7e0364 extends Template
     {
         return new Source("{{ form_start(form) }}
     {{ form_widget(form) }}
-    <button class=\"btn\">{{ button_label|default('Save') }}</button>
+    <button class=\"button11 btn btn-outline-primary position-relative\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
 ", "_news_form.html.twig", "C:\\Projects\\VinPhone\\templates\\_news_form.html.twig");
     }

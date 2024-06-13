@@ -87,17 +87,22 @@ class __TwigTemplate_e9ec80fdda58fb22287d656e513717b1 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>New</h1>
+        yield "
+<div class= \"card9 card position-relative\">
+    <div class= \"card-body\">
+    <h1>New</h1>
 
     ";
-        // line 8
+        // line 11
         yield Twig\Extension\CoreExtension::include($this->env, $context, "_news_form.html.twig");
         yield "
 
-    <a class= \"btn btn-outline-primary\" href=\"";
-        // line 10
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_news_index");
+        <a class= \"button12 btn btn-outline-primary position-relative\" href=\"";
+        // line 13
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_news");
         yield "\">Return</a>
+    </div>
+</div>
 
     <footer class=\"footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative\">
         <div class=\"col-md-4 d-flex align-items-center\">
@@ -105,25 +110,25 @@ class __TwigTemplate_e9ec80fdda58fb22287d656e513717b1 extends Template
         </div>
         <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">
             <li class=\"ms-3\"><a href=\"";
-        // line 17
+        // line 22
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.facebook.com"), "html", null, true);
         yield "\"><img class= \"FBLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/fb_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 18
+        // line 23
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.instagram.com"), "html", null, true);
         yield "\"><img class= \"IGLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/ig_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 19
+        // line 24
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.twitter.com"), "html", null, true);
         yield "\"><img class= \"XLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/x_logo.jpg"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 20
+        // line 25
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.tiktok.com"), "html", null, true);
         yield "\"><img class= \"TTLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/tt_logo.png"), "html", null, true);
@@ -161,7 +166,7 @@ class __TwigTemplate_e9ec80fdda58fb22287d656e513717b1 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  127 => 20,  121 => 19,  115 => 18,  109 => 17,  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  132 => 25,  126 => 24,  120 => 23,  114 => 22,  102 => 13,  97 => 11,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -171,11 +176,16 @@ class __TwigTemplate_e9ec80fdda58fb22287d656e513717b1 extends Template
 {% block title %}VinPhone - New{% endblock %}
 
 {% block body %}
+
+<div class= \"card9 card position-relative\">
+    <div class= \"card-body\">
     <h1>New</h1>
 
     {{ include('_news_form.html.twig') }}
 
-    <a class= \"btn btn-outline-primary\" href=\"{{ path('app_news_index') }}\">Return</a>
+        <a class= \"button12 btn btn-outline-primary position-relative\" href=\"{{ path('admin_news') }}\">Return</a>
+    </div>
+</div>
 
     <footer class=\"footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative\">
         <div class=\"col-md-4 d-flex align-items-center\">
