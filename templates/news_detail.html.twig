@@ -3,8 +3,8 @@
 {% block title %}VinPhone - Detail{% endblock %}
 
 {% block body %}
-
-
+<div class= "card10 card position-relative">
+    <div class= "card-body">
     <table class="table">
                 <h1>Detail</h1>
         <tbody>
@@ -30,17 +30,18 @@
             </tr>
         </tbody>
     </table>
+    </div>
+</div>
 
+    <a class="button13 btn btn-outline-warning position-relative" href="{{ path('news_edit', {'id': news.id}) }}">Edit</a>
 
     {% if is_granted("ROLE_ADMIN") %}
-    <a class= "btn btn-outline-primary" href="{{ path('admin_news') }}">Return</a>
+        <a class= "button14 btn btn-outline-primary position-relative" href="{{ path('admin_news') }}">Return</a>
     {% else %}
-    <a href="{{ path('member_news') }}">Return</a>
+        <a class= "button14 btn btn-outline-primary position-relative" href="{{ path('member_news') }}">Return</a>
     {% endif %}
 
-    <a href="{{ path('news_edit', {'id': news.id}) }}">Edit</a>
-
-    {{ include('_news_delete_form.html.twig') }}
+    <a class= "button15 btn btn-danger position-relative" href="{{ path('news_delete', {'id': news.id}) }}">Delete</a>
 
     <footer class="footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative">
         <div class="col-md-4 d-flex align-items-center">

@@ -25,7 +25,7 @@ return [
     'news_new' => [[], ['_controller' => 'App\\Controller\\NewsController::new'], [], [['text', '/admin/news/new']], [], [], []],
     'news_detail' => [['id'], ['_controller' => 'App\\Controller\\NewsController::show'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/news/detail']], [], [], []],
     'news_edit' => [['id'], ['_controller' => 'App\\Controller\\NewsController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/admin/news/edit']], [], [], []],
-    'app_news_delete' => [['id'], ['_controller' => 'App\\Controller\\NewsController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/news/delete']], [], [], []],
+    'news_delete' => [['id'], ['_controller' => 'App\\Controller\\NewsController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/news/delete']], [], [], []],
     'admin_dashboard' => [[], ['_controller' => 'App\\Controller\\PhoneController::admin_dashboard'], [], [['text', '/admin/dashboard']], [], [], []],
     'member_dashboard' => [[], ['_controller' => 'App\\Controller\\PhoneController::member_home'], [], [['text', '/member/dashboard']], [], [], []],
     'add' => [[], ['_controller' => 'App\\Controller\\PhoneController::new'], [], [['text', '/admin/add']], [], [], []],

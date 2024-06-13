@@ -1,5 +1,5 @@
 html, body {
-    background-image: url("/Pictures/Wallpaper.webp");
+    background-image: url("/pictures/Wallpaper.webp");
     font-family: 'Ubuntu Condensed', sans-serif;
 }
 
@@ -192,7 +192,7 @@ html, body {
     height: 1000px;
     width: 1100px;
     top: 205px;
-    left: 92px;
+    left: 88px;
     border-radius: 20px;
     margin-right: 0;
 }
@@ -215,7 +215,7 @@ html, body {
     height: 778px;
     width: 1100px;
     top: 299px;
-    left: 92px;
+    left: 88px;
     border-radius: 20px;
     margin-right: 0;
 }
@@ -229,6 +229,40 @@ html, body {
     top: 67px;
     left: 464px;
 }
+
+.card10 {
+    height: 778px;
+    width: 1100px;
+    top: 299px;
+    left: 88px;
+    border-radius: 20px;
+    margin-right: 0;
+}
+
+.button13 {
+    top: 239px;
+    left: 530px;
+}
+
+.button13:hover {
+    color: white;
+}
+
+.button14 {
+    top: 239px;
+    left: 558px;
+}
+
+.button15 {
+    top: 239px;
+    left: 586px;
+}
+
+.button16:hover {
+    color: white;
+}
+
+
 
 
 

@@ -94,15 +94,59 @@ class __TwigTemplate_bd2cbe6bfdf3ad84d9c8c6400bbab220 extends Template
         yield Twig\Extension\CoreExtension::include($this->env, $context, "_news_form.html.twig", ["button_label" => "Update"]);
         yield "
 
-    <a class= \"btn btn-outline-primary\" href=\"";
-        // line 10
-        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("news");
-        yield "\">back to list</a>
-
     ";
-        // line 12
+        // line 10
+        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
+            // line 11
+            yield "        <a class= \"btn btn-outline-primary\" href=\"";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_news");
+            yield "\">Return</a>
+    ";
+        } else {
+            // line 13
+            yield "        <a href=\"";
+            yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("member_news");
+            yield "\">Return</a>
+    ";
+        }
+        // line 15
+        yield "
+    ";
+        // line 16
         yield Twig\Extension\CoreExtension::include($this->env, $context, "_news_delete_form.html.twig");
         yield "
+
+    <footer class=\"footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative\">
+        <div class=\"col-md-4 d-flex align-items-center\">
+            <span class=\"text1 mb-3 mb-md-0 text-body-secondary position-relative\">© 2024 VinPhone</span>
+        </div>
+        <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">
+            <li class=\"ms-3\"><a href=\"";
+        // line 23
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.facebook.com"), "html", null, true);
+        yield "\"><img class= \"FBLogo position-relative\" src=\"";
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/fb_logo.png"), "html", null, true);
+        yield "\"></a></li>
+            <li class=\"ms-3\"><a href=\"";
+        // line 24
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.instagram.com"), "html", null, true);
+        yield "\"><img class= \"IGLogo position-relative\" src=\"";
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/ig_logo.png"), "html", null, true);
+        yield "\"></a></li>
+            <li class=\"ms-3\"><a href=\"";
+        // line 25
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.twitter.com"), "html", null, true);
+        yield "\"><img class= \"XLogo position-relative\" src=\"";
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/x_logo.jpg"), "html", null, true);
+        yield "\"></a></li>
+            <li class=\"ms-3\"><a href=\"";
+        // line 26
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.tiktok.com"), "html", null, true);
+        yield "\"><img class= \"TTLogo position-relative\" src=\"";
+        yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/tt_logo.png"), "html", null, true);
+        yield "\"></a></li>
+        </ul>
+    </footer>
 ";
         
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->leave($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof);
@@ -134,7 +178,7 @@ class __TwigTemplate_bd2cbe6bfdf3ad84d9c8c6400bbab220 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  104 => 12,  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  144 => 26,  138 => 25,  132 => 24,  126 => 23,  116 => 16,  113 => 15,  107 => 13,  101 => 11,  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -148,9 +192,25 @@ class __TwigTemplate_bd2cbe6bfdf3ad84d9c8c6400bbab220 extends Template
 
     {{ include('_news_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a class= \"btn btn-outline-primary\" href=\"{{ path('news') }}\">back to list</a>
+    {% if is_granted(\"ROLE_ADMIN\") %}
+        <a class= \"btn btn-outline-primary\" href=\"{{ path('admin_news') }}\">Return</a>
+    {% else %}
+        <a href=\"{{ path('member_news') }}\">Return</a>
+    {% endif %}
 
     {{ include('_news_delete_form.html.twig') }}
+
+    <footer class=\"footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative\">
+        <div class=\"col-md-4 d-flex align-items-center\">
+            <span class=\"text1 mb-3 mb-md-0 text-body-secondary position-relative\">© 2024 VinPhone</span>
+        </div>
+        <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">
+            <li class=\"ms-3\"><a href=\"{{ asset('https://www.facebook.com') }}\"><img class= \"FBLogo position-relative\" src=\"{{ asset('/pictures/fb_logo.png') }}\"></a></li>
+            <li class=\"ms-3\"><a href=\"{{ asset('https://www.instagram.com') }}\"><img class= \"IGLogo position-relative\" src=\"{{ asset('/pictures/ig_logo.png') }}\"></a></li>
+            <li class=\"ms-3\"><a href=\"{{ asset('https://www.twitter.com') }}\"><img class= \"XLogo position-relative\" src=\"{{ asset('/pictures/x_logo.jpg') }}\"></a></li>
+            <li class=\"ms-3\"><a href=\"{{ asset('https://www.tiktok.com') }}\"><img class= \"TTLogo position-relative\" src=\"{{ asset('/pictures/tt_logo.png') }}\"></a></li>
+        </ul>
+    </footer>
 {% endblock %}
 ", "news_edit.html.twig", "C:\\Projects\\VinPhone\\templates\\news_edit.html.twig");
     }

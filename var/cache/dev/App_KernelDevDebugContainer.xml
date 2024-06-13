@@ -9,8 +9,8 @@
     <parameter key="kernel.runtime_mode.cli">%env(not:default:kernel.runtime_mode.web:)%</parameter>
     <parameter key="kernel.runtime_mode.worker">%env(bool:default::key:worker:default:kernel.runtime_mode:)%</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.build_dir">C:\Projects\VinPhone\var\cache\dev</parameter>
-    <parameter key="kernel.cache_dir">C:\Projects\VinPhone\var\cache\dev</parameter>
+    <parameter key="kernel.build_dir">C:/Projects/VinPhone/var/cache/dev</parameter>
+    <parameter key="kernel.cache_dir">C:/Projects/VinPhone/var/cache/dev</parameter>
     <parameter key="kernel.logs_dir">C:\Projects\VinPhone\var\log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
@@ -115,15 +115,15 @@
     <parameter key="translator.logging">false</parameter>
     <parameter key="translator.default_path">C:\Projects\VinPhone/translations</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">C:\Projects\VinPhone\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">C:/Projects/VinPhone/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
     <parameter key="router.resource">kernel::loadRoutes</parameter>
-    <parameter key="router.cache_dir">C:\Projects\VinPhone\var\cache\dev</parameter>
+    <parameter key="router.cache_dir">C:/Projects/VinPhone/var/cache/dev</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
-    <parameter key="serializer.mapping.cache.file">C:\Projects\VinPhone\var\cache\dev/serialization.php</parameter>
+    <parameter key="serializer.mapping.cache.file">C:/Projects/VinPhone/var/cache/dev/serialization.php</parameter>
     <parameter key="cache.prefix.seed">_C:\Projects\VinPhone.App_KernelDevDebugContainer</parameter>
     <parameter key="session.metadata.storage_key">_sf2_meta</parameter>
     <parameter key="session.storage.options" type="collection">
@@ -137,11 +137,11 @@
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
-    <parameter key="validator.mapping.cache.file">C:\Projects\VinPhone\var\cache\dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">C:/Projects/VinPhone/var/cache/dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_main_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:C:\Projects\VinPhone\var\cache\dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:C:/Projects/VinPhone/var/cache/dev/profiler</parameter>
     <parameter key="doctrine.dbal.configuration.class">Doctrine\DBAL\Configuration</parameter>
     <parameter key="doctrine.data_collector.class">Doctrine\Bundle\DoctrineBundle\DataCollector\DoctrineDataCollector</parameter>
     <parameter key="doctrine.dbal.connection.event_manager.class">Symfony\Bridge\Doctrine\ContainerAwareEventManager</parameter>
@@ -206,7 +206,7 @@
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
     <parameter key="doctrine.orm.enable_lazy_ghost_objects">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">C:\Projects\VinPhone\var\cache\dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">C:/Projects/VinPhone/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -447,7 +447,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
       <tag priority="-50" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">controller.argument_value_resolver</tag>
-      <argument type="service" id=".service_locator.BtvPlLa"/>
+      <argument type="service" id=".service_locator.sZM4ZJV"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">
       <tag priority="-100" name="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver">controller.argument_value_resolver</tag>
@@ -528,7 +528,7 @@
       </argument>
     </service>
     <service id="http_cache.store" class="Symfony\Component\HttpKernel\HttpCache\Store">
-      <argument>C:\Projects\VinPhone\var\cache\dev/http_cache</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/http_cache</argument>
     </service>
     <service id="url_helper" class="Symfony\Component\HttpFoundation\UrlHelper">
       <argument type="service" id="request_stack"/>
@@ -538,7 +538,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -1532,7 +1532,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -1551,7 +1551,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/app</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -1721,7 +1721,7 @@
     <service id="asset_mapper.cached_mapped_asset_factory" class="Symfony\Component\AssetMapper\Factory\CachedMappedAssetFactory">
       <tag name="container.decorator" id="asset_mapper.mapped_asset_factory" inner="asset_mapper.cached_mapped_asset_factory.inner"/>
       <argument type="service" id="asset_mapper.cached_mapped_asset_factory.inner"/>
-      <argument>C:\Projects\VinPhone\var\cache\dev/asset_mapper</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/asset_mapper</argument>
       <argument>true</argument>
     </service>
     <service id="asset_mapper.repository" class="Symfony\Component\AssetMapper\AssetMapperRepository">
@@ -2090,7 +2090,7 @@
         </argument>
       </argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\Projects\VinPhone\var\cache\dev/translations</argument>
+        <argument key="cache_dir">C:/Projects/VinPhone/var/cache/dev/translations</argument>
         <argument key="debug">true</argument>
         <argument key="resource_files" type="collection">
           <argument key="af" type="collection">
@@ -3338,7 +3338,7 @@
     </service>
     <service id="argument_resolver.not_tagged_controller" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
       <tag name="controller.argument_value_resolver" priority="-200"/>
-      <argument type="service" id=".service_locator.BtvPlLa"/>
+      <argument type="service" id=".service_locator.sZM4ZJV"/>
     </service>
     <service id="debug.log_processor" class="Symfony\Bridge\Monolog\Processor\DebugProcessor">
       <tag name="kernel.reset" method="reset"/>
@@ -3441,7 +3441,7 @@
       <argument type="service" id=".service_locator.zAVTS8N.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">C:\Projects\VinPhone\var\cache\dev</argument>
+        <argument key="cache_dir">C:/Projects/VinPhone/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -3619,10 +3619,10 @@
           <service class="Symfony\Component\Serializer\Mapping\Loader\AttributeLoader"/>
         </argument>
       </argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/serialization.php</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/serialization.php</argument>
     </service>
     <service id="serializer.mapping.cache.symfony" class="Psr\Cache\CacheItemPoolInterface">
-      <argument>C:\Projects\VinPhone\var\cache\dev/serialization.php</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/serialization.php</argument>
       <argument type="service" id="cache.serializer"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -3780,7 +3780,7 @@
       <argument>true</argument>
     </service>
     <service id="session.storage.factory.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorageFactory">
-      <argument>C:\Projects\VinPhone\var\cache\dev/sessions</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service">
         <service class="Symfony\Component\HttpFoundation\Session\Storage\MetadataBag">
@@ -3983,10 +3983,10 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>C:\Projects\VinPhone\var\cache\dev/validation.php</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/validation.php</argument>
     </service>
     <service id="validator.mapping.cache.adapter" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" constructor="create">
-      <argument>C:\Projects\VinPhone\var\cache\dev/validation.php</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory">
@@ -4649,7 +4649,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage">
-      <argument>file:C:\Projects\VinPhone\var\cache\dev/profiler</argument>
+      <argument>file:C:/Projects/VinPhone/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -4708,7 +4708,7 @@
       <tag name="monolog.logger" channel="profiler"/>
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>C:\Projects\VinPhone\var\cache\dev/App_KernelDevDebugContainer</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/App_KernelDevDebugContainer</argument>
       <argument type="service" id=".virtual_request_stack" on-invalid="ignore"/>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector">
@@ -5299,7 +5299,7 @@
         <argument type="service" id=".doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>C:\Projects\VinPhone\var\cache\dev/doctrine/orm/Proxies</argument>
+        <argument>C:/Projects/VinPhone/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -5701,7 +5701,7 @@
       <tag name="container.preload" class="Twig\TemplateWrapper"/>
       <argument type="service" id="twig.loader.native_filesystem"/>
       <argument type="collection">
-        <argument key="cache">C:\Projects\VinPhone\var\cache\dev/twig</argument>
+        <argument key="cache">C:/Projects/VinPhone/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
         <argument key="debug">true</argument>
         <argument key="strict_variables">true</argument>
@@ -7882,11 +7882,19 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.nQDDdtL" method="withContext"/>
     </service>
-    <service id=".service_locator.nQDDdtL.App\Controller\NewsController::delete()" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.IVwnqSy" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="entityManager" type="service_closure" id="doctrine.orm.default_entity_manager"/>
+        <argument key="news" type="service_closure" id=".errored..service_locator.IVwnqSy.App\Entity\News"/>
+        <argument key="security" type="service_closure" id="security.helper"/>
+      </argument>
+    </service>
+    <service id=".service_locator.IVwnqSy.App\Controller\NewsController::delete()" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\NewsController::delete()"/>
       <argument>App\Controller\NewsController::delete()</argument>
       <argument type="service" id="service_container"/>
-      <factory service=".service_locator.nQDDdtL" method="withContext"/>
+      <factory service=".service_locator.IVwnqSy" method="withContext"/>
     </service>
     <service id=".service_locator.nbonErD" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
@@ -8008,13 +8016,13 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.q60ydOj" method="withContext"/>
     </service>
-    <service id=".service_locator.BtvPlLa" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.sZM4ZJV" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\LoginController::login" type="service_closure" id=".service_locator.mXDaS5b.App\Controller\LoginController::login()"/>
         <argument key="App\Controller\LoginController::redirectAction" type="service_closure" id=".service_locator.uBR2pyw.App\Controller\LoginController::redirectAction()"/>
         <argument key="App\Controller\NewsController::admin_news" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::admin_news()"/>
-        <argument key="App\Controller\NewsController::delete" type="service_closure" id=".service_locator.nQDDdtL.App\Controller\NewsController::delete()"/>
+        <argument key="App\Controller\NewsController::delete" type="service_closure" id=".service_locator.IVwnqSy.App\Controller\NewsController::delete()"/>
         <argument key="App\Controller\NewsController::edit" type="service_closure" id=".service_locator.nQDDdtL.App\Controller\NewsController::edit()"/>
         <argument key="App\Controller\NewsController::member_news" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::member_news()"/>
         <argument key="App\Controller\NewsController::new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\NewsController::new()"/>
@@ -8037,7 +8045,7 @@
         <argument key="App\Controller\LoginController:login" type="service_closure" id=".service_locator.mXDaS5b.App\Controller\LoginController::login()"/>
         <argument key="App\Controller\LoginController:redirectAction" type="service_closure" id=".service_locator.uBR2pyw.App\Controller\LoginController::redirectAction()"/>
         <argument key="App\Controller\NewsController:admin_news" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::admin_news()"/>
-        <argument key="App\Controller\NewsController:delete" type="service_closure" id=".service_locator.nQDDdtL.App\Controller\NewsController::delete()"/>
+        <argument key="App\Controller\NewsController:delete" type="service_closure" id=".service_locator.IVwnqSy.App\Controller\NewsController::delete()"/>
         <argument key="App\Controller\NewsController:edit" type="service_closure" id=".service_locator.nQDDdtL.App\Controller\NewsController::edit()"/>
         <argument key="App\Controller\NewsController:member_news" type="service_closure" id=".service_locator.WUzs2TX.App\Controller\NewsController::member_news()"/>
         <argument key="App\Controller\NewsController:new" type="service_closure" id=".service_locator.P.blNFL.App\Controller\NewsController::new()"/>
@@ -9018,6 +9026,9 @@
     <service id=".errored..service_locator.nQDDdtL.App\Entity\News" class="App\Entity\News">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.nQDDdtL&quot;: it needs an instance of &quot;App\Entity\News&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
+    <service id=".errored..service_locator.IVwnqSy.App\Entity\News" class="App\Entity\News">
+      <tag name="container.error" message="Cannot autowire service &quot;.service_locator.IVwnqSy&quot;: it needs an instance of &quot;App\Entity\News&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
+    </service>
     <service id=".errored..service_locator.Dqjx1.5.App\Entity\Phone" class="App\Entity\Phone">
       <tag name="container.error" message="Cannot autowire service &quot;.service_locator.Dqjx1.5&quot;: it needs an instance of &quot;App\Entity\Phone&quot; but this type has been excluded in &quot;config/services.yaml&quot;."/>
     </service>
@@ -9957,7 +9968,7 @@
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>G-Omnf6jPs</argument>
       <argument>0</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/app</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -9967,7 +9978,7 @@
       <argument>bLurWUCuIw</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -9975,7 +9986,7 @@
       <argument>iOOtgZOH04</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -9983,7 +9994,7 @@
       <argument>ITGYN3HnXB</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -9991,7 +10002,7 @@
       <argument>011nZu2M3D</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -9999,14 +10010,14 @@
       <argument>ptZMM-iYb+</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.messenger.restart_workers_signal.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter">
       <argument>CdqrKmTqr6</argument>
       <argument>0</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/app</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/app</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
@@ -10016,7 +10027,7 @@
       <argument>19EdnH0tKX</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -10026,7 +10037,7 @@
       <argument>8zKK0OTG29</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -10034,7 +10045,7 @@
       <argument>ibBvShpfuG</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -10042,7 +10053,7 @@
       <argument>9cvislMifu</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>C:\Projects\VinPhone\var\cache\dev/pools/system</argument>
+      <argument>C:/Projects/VinPhone/var/cache/dev/pools/system</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -10191,7 +10202,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.1W6W_dF" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.BtvPlLa"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.sZM4ZJV"/>
     <service id="doctrine.id_generator_locator" alias=".service_locator.BxSdgVt"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
@@ -10240,6 +10251,7 @@
     <service id=".service_locator.4KsIGyf" alias=".service_locator.P.blNFL"/>
     <service id=".service_locator.pBy4dKY" alias=".service_locator.q9gYYmg"/>
     <service id=".service_locator.GLLroly" alias=".service_locator.nQDDdtL"/>
+    <service id=".service_locator.kB3X8qy" alias=".service_locator.IVwnqSy"/>
     <service id=".service_locator.jMGTiFt" alias=".service_locator.nbonErD"/>
     <service id=".service_locator.xkk5mr." alias=".service_locator.Ji5OBMP"/>
     <service id=".service_locator.qkxpL2l" alias=".service_locator.Dqjx1.5"/>

@@ -30,7 +30,7 @@
                     <td>{{ phone.model }}</td>
                     <td> {{ phone.price }}</td>
                   <td>
-                      <a href="{{ path('phone_edit', {'id': phone.id}) }}"><button type="button" class="btn btn-outline-warning">Edit</button></a>
+                      <a class="button16" href="{{ path('phone_edit', {'id': phone.id}) }}"><button type="button" class="btn btn-outline-warning">Edit</button></a>
                       <a href="{{ path('phone_delete', {'id': phone.id}) }}"><button type="button" class="btn btn-outline-danger">Delete</button></a>
                   </td>
                 </tbody>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 12. Jun 2024 um 09:41
+-- Erstellungszeit: 13. Jun 2024 um 12:16
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -42,7 +42,8 @@ CREATE TABLE `doctrine_migration_versions` (
 
 INSERT INTO `doctrine_migration_versions` (`version`, `executed_at`, `execution_time`) VALUES
 ('DoctrineMigrations\\Version20240602162253', '2024-06-02 18:23:28', 144),
-('DoctrineMigrations\\Version20240612074049', '2024-06-12 09:41:21', 200);
+('DoctrineMigrations\\Version20240612074049', '2024-06-12 09:41:21', 200),
+('DoctrineMigrations\\Version20240613091230', '2024-06-13 11:12:50', 124);
 
 -- --------------------------------------------------------
 
@@ -73,8 +74,20 @@ CREATE TABLE `news` (
   `date` date NOT NULL,
   `title` varchar(255) NOT NULL,
   `description` longtext NOT NULL,
-  `role` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '(DC2Type:json)' CHECK (json_valid(`role`))
+  `role` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Daten für Tabelle `news`
+--
+
+INSERT INTO `news` (`id`, `date`, `title`, `description`, `role`) VALUES
+(2, '2024-06-13', 'First news article on VinPhone', 'This is the very first news article on VinPhone and the purpose of this news article is to make sure that this news article gets properly inserted into the database and then displayed inside the news page. It can be lastly said that this news article is made for testing purposes.', '[\"ROLE_ADMIN\"], [\"ROLE_MEMBER\"]'),
+(3, '2024-06-13', 'News article for admins', 'This is a news article for admins and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that this news article is lastly properly visible inside the news page for admins.', '[\"ROLE_ADMIN\"]'),
+(4, '2024-06-13', 'News article for members', 'This is a news article for members and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that this news article is lastly properly visible inside the news page for members.', '[\"ROLE_MEMBER\"]'),
+(5, '2024-06-13', 'News article for editing purposes', 'This is a news article for everyone and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that the detail of this news article is properly visible inside the database.', '[\"ROLE_MEMBER\"], [\"ROLE_ADMIN\"]'),
+(6, '2024-06-13', 'News article for detail purposes', 'This is a news article for everyone and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that the detail of this news article is properly visible inside the database.', '[\"ROLE_MEMBER\"], [\"ROLE_ADMIN\"]'),
+(7, '2024-06-13', 'News article for deletion purposes', 'This is a news article for everyone and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that the detail of this news article is properly deleted from the database.', '[\"ROLE_MEMBER\"], [\"ROLE_ADMIN\"]');
 
 -- --------------------------------------------------------
 
@@ -87,6 +100,18 @@ CREATE TABLE `news_user` (
   `news_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Daten für Tabelle `news_user`
+--
+
+INSERT INTO `news_user` (`news_id`, `user_id`) VALUES
+(2, 4),
+(3, 4),
+(4, 4),
+(5, 4),
+(6, 4),
+(7, 4);
 
 -- --------------------------------------------------------
 
@@ -204,7 +229,7 @@ ALTER TABLE `messenger_messages`
 -- AUTO_INCREMENT für Tabelle `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT für Tabelle `phone`
