@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 13. Jun 2024 um 13:55
+-- Erstellungszeit: 13. Jun 2024 um 14:47
 -- Server-Version: 10.4.32-MariaDB
 -- PHP-Version: 8.2.12
 
@@ -87,7 +87,7 @@ INSERT INTO `news` (`id`, `date`, `title`, `description`, `role`) VALUES
 (4, '2024-06-13', 'News article for members', 'This is a news article for members and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that this news article is lastly properly visible inside the news page for members.', '[\"ROLE_MEMBER\"]'),
 (5, '2024-06-13', 'News article for editing purposes', 'Nam consectetur leo sapien, eu placerat magna dignissim quis. Nulla sed turpis tortor. Ut id posuere nulla, nec gravida lacus. Sed at rhoncus turpis, non lacinia lacus. Cras suscipit libero velit, eu mattis leo commodo sit amet. Cras a lobortis elit, sit amet rhoncus metus. Aliquam elementum pellentesque est id lacinia. Maecenas ut dui feugiat, ultricies ipsum non.', '[\"ROLE_MEMBER\"], [\"ROLE_ADMIN\"]'),
 (6, '2024-06-13', 'News article for detail purposes', 'This is a news article for everyone and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that the detail of this news article is properly visible inside the database.', '[\"ROLE_MEMBER\"], [\"ROLE_ADMIN\"]'),
-(8, '2024-06-13', 'News article for deletion purposes', 'This is a news article for everyone and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that the detail of this news article is properly deleted from the database.', '[\"ROLE_MEMBER\"], [\"ROLE_ADMIN\"]');
+(10, '2024-06-13', 'News article for deletion purposes', 'This is a news article for everyone and the purpose of this news article is to make sure that this news article is properly inserted into the database. The second purpose of this news article it to make sure that the detail of this news article is properly deleted from the database.', '[\"ROLE_MEMBER\"], [\"ROLE_ADMIN\"]');
 
 -- --------------------------------------------------------
 
@@ -111,7 +111,7 @@ INSERT INTO `news_user` (`news_id`, `user_id`) VALUES
 (4, 4),
 (5, 4),
 (6, 4),
-(8, 4);
+(10, 4);
 
 -- --------------------------------------------------------
 
@@ -229,7 +229,7 @@ ALTER TABLE `messenger_messages`
 -- AUTO_INCREMENT für Tabelle `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT für Tabelle `phone`

@@ -48,20 +48,20 @@ return [
                         .')'
                     .')'
                 .')'
-                .'|/news/de(?'
-                    .'|tail/([^/]++)(*:226)'
-                    .'|lete/([^/]++)(*:247)'
-                .')'
+                .'|/news/detail/([^/]++)(*:223)'
                 .'|/admin/(?'
-                    .'|news/edit/([^/]++)(*:284)'
-                    .'|de(?'
-                        .'|tail/([^/]++)(*:310)'
-                        .'|lete/([^/]++)(*:331)'
+                    .'|news/(?'
+                        .'|edit/([^/]++)(*:262)'
+                        .'|delete/([^/]++)(*:285)'
                     .')'
-                    .'|edit/([^/]++)(*:353)'
+                    .'|de(?'
+                        .'|tail/([^/]++)(*:312)'
+                        .'|lete/([^/]++)(*:333)'
+                    .')'
+                    .'|edit/([^/]++)(*:355)'
                     .'|user\\-manager/(?'
-                        .'|edit/([^/]++)(*:391)'
-                        .'|delete/([^/]++)(*:414)'
+                        .'|edit/([^/]++)(*:393)'
+                        .'|delete/([^/]++)(*:416)'
                     .')'
                 .')'
             .')/?$}sDu',
@@ -75,14 +75,14 @@ return [
         168 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        226 => [[['_route' => 'news_detail', '_controller' => 'App\\Controller\\NewsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        247 => [[['_route' => 'news_delete', '_controller' => 'App\\Controller\\NewsController::delete'], ['id'], ['POST' => 0], null, false, true, null]],
-        284 => [[['_route' => 'news_edit', '_controller' => 'App\\Controller\\NewsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        310 => [[['_route' => 'phone_detail', '_controller' => 'App\\Controller\\PhoneController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        331 => [[['_route' => 'phone_delete', '_controller' => 'App\\Controller\\PhoneController::delete'], ['id'], null, null, false, true, null]],
-        353 => [[['_route' => 'phone_edit', '_controller' => 'App\\Controller\\PhoneController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        391 => [[['_route' => 'user_manager_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        414 => [
+        223 => [[['_route' => 'news_detail', '_controller' => 'App\\Controller\\NewsController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        262 => [[['_route' => 'news_edit', '_controller' => 'App\\Controller\\NewsController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        285 => [[['_route' => 'news_delete', '_controller' => 'App\\Controller\\NewsController::delete'], ['id'], null, null, false, true, null]],
+        312 => [[['_route' => 'phone_detail', '_controller' => 'App\\Controller\\PhoneController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        333 => [[['_route' => 'phone_delete', '_controller' => 'App\\Controller\\PhoneController::delete'], ['id'], null, null, false, true, null]],
+        355 => [[['_route' => 'phone_edit', '_controller' => 'App\\Controller\\PhoneController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        393 => [[['_route' => 'user_manager_edit', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        416 => [
             [['_route' => 'user_manager_delete', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], ['POST' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],

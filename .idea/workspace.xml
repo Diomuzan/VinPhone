@@ -5,20 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f06d563b-66ff-4764-a033-e476c1f94e03" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/_news_edit_form.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css_documents/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css_documents/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/sql_files/vinphone_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/public/sql_files/vinphone_database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_news_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_news_delete_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/_news_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/_news_new_form.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/news_edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news_edit.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/news_new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news_new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/NewsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/member_dashboard.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/member_dashboard.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/member_news.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/member_news.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.php.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/App_KernelDevDebugContainer.xml.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/36/36a5f315611cc0eeae47a8ade3370821.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/36/36a5f315611cc0eeae47a8ade3370821.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/55/55df378a44b2fd8a5bb41fbe2592a8b8.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/55/55df378a44b2fd8a5bb41fbe2592a8b8.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/72/72f44b936e8afb46316e53bb4e7c377c.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/72/72f44b936e8afb46316e53bb4e7c377c.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/a5/a56d6137ed274f89877b2b273cb1b3c4.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/a5/a56d6137ed274f89877b2b273cb1b3c4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/f5/f55f92d0f5d1400c68e11fb393ddd271.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/f5/f55f92d0f5d1400c68e11fb393ddd271.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv.offset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/39/39cdb98bb36a0dca92e01f66474cbe19.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/39/39cdb98bb36a0dca92e01f66474cbe19.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/f5/f55f92d0f5d1400c68e11fb393ddd271.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -314,7 +315,7 @@
       <workItem from="1718188289426" duration="457000" />
       <workItem from="1718188772257" duration="5398000" />
       <workItem from="1718262982102" duration="9388000" />
-      <workItem from="1718278738497" duration="1460000" />
+      <workItem from="1718278738497" duration="4554000" />
     </task>
     <servers />
   </component>

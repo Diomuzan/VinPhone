@@ -16,7 +16,7 @@ if (!\class_exists(App_KernelDevDebugContainer::class, false)) {
 
 return new \ContainerXKN4psv\App_KernelDevDebugContainer([
     'container.build_hash' => 'XKN4psv',
-    'container.build_id' => '47530c56',
-    'container.build_time' => 1718272507,
+    'container.build_id' => '310d347b',
+    'container.build_time' => 1718284841,
     'container.runtime_mode' => \in_array(\PHP_SAPI, ['cli', 'phpdbg', 'embed'], true) ? 'web=0' : 'web=1',
 ], __DIR__.\DIRECTORY_SEPARATOR.'ContainerXKN4psv');

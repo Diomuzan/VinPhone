@@ -68,7 +68,7 @@ class __TwigTemplate_078ccac273f565a38e7c8104044d0cac extends Template
         // line 4
         yield "    <div class=\"card card1 position-relative\">
         <div class=\"card-body\">
-            <h1 class= \"text1 position-relative\">Hi ";
+            <h1 class= \"heading5 position-relative\">Hi ";
         // line 6
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape((isset($context["account"]) || array_key_exists("account", $context) ? $context["account"] : (function () { throw new RuntimeError('Variable "account" does not exist.', 6, $this->source); })()), "html", null, true);
         yield "!</h1>
@@ -184,7 +184,7 @@ class __TwigTemplate_078ccac273f565a38e7c8104044d0cac extends Template
 {% block body %}
     <div class=\"card card1 position-relative\">
         <div class=\"card-body\">
-            <h1 class= \"text1 position-relative\">Hi {{ account }}!</h1>
+            <h1 class= \"heading5 position-relative\">Hi {{ account }}!</h1>
             <table class=\"table\">
                 <thead>
                 <tr>
