@@ -48,7 +48,7 @@ class __TwigTemplate_e8968e85bdbe847da166f8f2323d0091 extends Template
         // line 2
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken(("delete" . CoreExtension::getAttribute($this->env, $this->source, (isset($context["news"]) || array_key_exists("news", $context) ? $context["news"] : (function () { throw new RuntimeError('Variable "news" does not exist.', 2, $this->source); })()), "id", [], "any", false, false, false, 2))), "html", null, true);
         yield "\">
-    <button class=\"btn btn-outline-danger\">Delete</button>
+    <button class=\"button18 btn btn-outline-danger position-relative\">Delete</button>
 </form>
 ";
         
@@ -88,7 +88,7 @@ class __TwigTemplate_e8968e85bdbe847da166f8f2323d0091 extends Template
     {
         return new Source("<form method=\"post\" action=\"{{ path('news_delete', {'id': news.id}) }}\" onsubmit=\"return confirm('Are you sure you want to delete this news item?');\">
     <input type=\"hidden\" name=\"_token\" value=\"{{ csrf_token('delete' ~ news.id) }}\">
-    <button class=\"btn btn-outline-danger\">Delete</button>
+    <button class=\"button18 btn btn-outline-danger position-relative\">Delete</button>
 </form>
 ", "_news_delete_form.html.twig", "C:\\Projects\\VinPhone\\templates\\_news_delete_form.html.twig");
     }

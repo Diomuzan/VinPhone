@@ -94,7 +94,7 @@ class __TwigTemplate_e9ec80fdda58fb22287d656e513717b1 extends Template
 
     ";
         // line 11
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "_news_form.html.twig");
+        yield Twig\Extension\CoreExtension::include($this->env, $context, "_news_new_form.html.twig");
         yield "
 
         <a class= \"button12 btn btn-outline-primary position-relative\" href=\"";
@@ -181,7 +181,7 @@ class __TwigTemplate_e9ec80fdda58fb22287d656e513717b1 extends Template
     <div class= \"card-body\">
     <h1>New</h1>
 
-    {{ include('_news_form.html.twig') }}
+    {{ include('_news_new_form.html.twig') }}
 
         <a class= \"button12 btn btn-outline-primary position-relative\" href=\"{{ path('admin_news') }}\">Return</a>
     </div>

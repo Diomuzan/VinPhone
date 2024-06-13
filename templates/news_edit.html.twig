@@ -3,17 +3,21 @@
 {% block title %}VinPhone - Edit{% endblock %}
 
 {% block body %}
+<div class= "card11 card position-relative">
+    <div class= "card-body">
     <h1>Edit</h1>
 
-    {{ include('_news_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('_news_edit_form.html.twig', {'button_label': 'Update'}) }}
 
     {% if is_granted("ROLE_ADMIN") %}
-        <a class= "btn btn-outline-primary" href="{{ path('admin_news') }}">Return</a>
+        <a class= "button19 btn btn-outline-primary position-relative" href="{{ path('admin_news') }}">Return</a>
     {% else %}
         <a href="{{ path('member_news') }}">Return</a>
     {% endif %}
 
     {{ include('_news_delete_form.html.twig') }}
+    </div>
+</div>
 
     <footer class="footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative">
         <div class="col-md-4 d-flex align-items-center">

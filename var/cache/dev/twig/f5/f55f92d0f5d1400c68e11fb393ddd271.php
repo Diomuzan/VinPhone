@@ -13,7 +13,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* _news_form.html.twig */
+/* _news_new_form.html.twig */
 class __TwigTemplate_da4d236c8ea0440d6c5346ba8b7e0364 extends Template
 {
     private $source;
@@ -35,10 +35,10 @@ class __TwigTemplate_da4d236c8ea0440d6c5346ba8b7e0364 extends Template
     {
         $macros = $this->macros;
         $__internal_5a27a8ba21ca79b61932376b2fa922d2 = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_news_form.html.twig"));
+        $__internal_5a27a8ba21ca79b61932376b2fa922d2->enter($__internal_5a27a8ba21ca79b61932376b2fa922d2_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_news_new_form.html.twig"));
 
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_news_form.html.twig"));
+        $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "_news_new_form.html.twig"));
 
         // line 1
         yield         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["form"]) || array_key_exists("form", $context) ? $context["form"] : (function () { throw new RuntimeError('Variable "form" does not exist.', 1, $this->source); })()), 'form_start');
@@ -70,7 +70,7 @@ class __TwigTemplate_da4d236c8ea0440d6c5346ba8b7e0364 extends Template
      */
     public function getTemplateName()
     {
-        return "_news_form.html.twig";
+        return "_news_new_form.html.twig";
     }
 
     /**
@@ -95,6 +95,6 @@ class __TwigTemplate_da4d236c8ea0440d6c5346ba8b7e0364 extends Template
     {{ form_widget(form) }}
     <button class=\"button11 btn btn-outline-primary position-relative\">{{ button_label|default('Save') }}</button>
 {{ form_end(form) }}
-", "_news_form.html.twig", "C:\\Projects\\VinPhone\\templates\\_news_form.html.twig");
+", "_news_new_form.html.twig", "C:\\Projects\\VinPhone\\templates\\_news_new_form.html.twig");
     }
 }

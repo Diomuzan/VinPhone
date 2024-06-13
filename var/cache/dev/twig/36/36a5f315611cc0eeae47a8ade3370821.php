@@ -147,7 +147,7 @@ class __TwigTemplate_bf9075922c1e1d0b0dc651b9f2623741 extends Template
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["phone"], "price", [], "any", false, false, false, 31), "html", null, true);
             yield "</td>
                   <td>
-                      <a href=\"";
+                      <a class=\"button16\" href=\"";
             // line 33
             yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("phone_edit", ["id" => CoreExtension::getAttribute($this->env, $this->source, $context["phone"], "id", [], "any", false, false, false, 33)]), "html", null, true);
             yield "\"><button type=\"button\" class=\"btn btn-outline-warning\">Edit</button></a>
@@ -280,7 +280,7 @@ class __TwigTemplate_bf9075922c1e1d0b0dc651b9f2623741 extends Template
                     <td>{{ phone.model }}</td>
                     <td> {{ phone.price }}</td>
                   <td>
-                      <a href=\"{{ path('phone_edit', {'id': phone.id}) }}\"><button type=\"button\" class=\"btn btn-outline-warning\">Edit</button></a>
+                      <a class=\"button16\" href=\"{{ path('phone_edit', {'id': phone.id}) }}\"><button type=\"button\" class=\"btn btn-outline-warning\">Edit</button></a>
                       <a href=\"{{ path('phone_delete', {'id': phone.id}) }}\"><button type=\"button\" class=\"btn btn-outline-danger\">Delete</button></a>
                   </td>
                 </tbody>

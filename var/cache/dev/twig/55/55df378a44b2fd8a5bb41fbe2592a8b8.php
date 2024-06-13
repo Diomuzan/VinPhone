@@ -87,34 +87,38 @@ class __TwigTemplate_bd2cbe6bfdf3ad84d9c8c6400bbab220 extends Template
         $__internal_6f47bbe9983af81f1e7450e9a3e3768f->enter($__internal_6f47bbe9983af81f1e7450e9a3e3768f_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "body"));
 
         // line 6
-        yield "    <h1>Edit</h1>
-
-    ";
-        // line 8
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "_news_form.html.twig", ["button_label" => "Update"]);
-        yield "
+        yield "<div class= \"card11 card position-relative\">
+    <div class= \"card-body\">
+    <h1>Edit</h1>
 
     ";
         // line 10
+        yield Twig\Extension\CoreExtension::include($this->env, $context, "_news_edit_form.html.twig", ["button_label" => "Update"]);
+        yield "
+
+    ";
+        // line 12
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 11
-            yield "        <a class= \"btn btn-outline-primary\" href=\"";
+            // line 13
+            yield "        <a class= \"button19 btn btn-outline-primary position-relative\" href=\"";
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("admin_news");
             yield "\">Return</a>
     ";
         } else {
-            // line 13
+            // line 15
             yield "        <a href=\"";
             yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("member_news");
             yield "\">Return</a>
     ";
         }
-        // line 15
+        // line 17
         yield "
     ";
-        // line 16
+        // line 18
         yield Twig\Extension\CoreExtension::include($this->env, $context, "_news_delete_form.html.twig");
         yield "
+    </div>
+</div>
 
     <footer class=\"footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative\">
         <div class=\"col-md-4 d-flex align-items-center\">
@@ -122,25 +126,25 @@ class __TwigTemplate_bd2cbe6bfdf3ad84d9c8c6400bbab220 extends Template
         </div>
         <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">
             <li class=\"ms-3\"><a href=\"";
-        // line 23
+        // line 27
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.facebook.com"), "html", null, true);
         yield "\"><img class= \"FBLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/fb_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 24
+        // line 28
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.instagram.com"), "html", null, true);
         yield "\"><img class= \"IGLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/ig_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 25
+        // line 29
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.twitter.com"), "html", null, true);
         yield "\"><img class= \"XLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/x_logo.jpg"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 26
+        // line 30
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.tiktok.com"), "html", null, true);
         yield "\"><img class= \"TTLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/tt_logo.png"), "html", null, true);
@@ -178,7 +182,7 @@ class __TwigTemplate_bd2cbe6bfdf3ad84d9c8c6400bbab220 extends Template
      */
     public function getDebugInfo()
     {
-        return array (  144 => 26,  138 => 25,  132 => 24,  126 => 23,  116 => 16,  113 => 15,  107 => 13,  101 => 11,  99 => 10,  94 => 8,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  148 => 30,  142 => 29,  136 => 28,  130 => 27,  118 => 18,  115 => 17,  109 => 15,  103 => 13,  101 => 12,  96 => 10,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -188,17 +192,21 @@ class __TwigTemplate_bd2cbe6bfdf3ad84d9c8c6400bbab220 extends Template
 {% block title %}VinPhone - Edit{% endblock %}
 
 {% block body %}
+<div class= \"card11 card position-relative\">
+    <div class= \"card-body\">
     <h1>Edit</h1>
 
-    {{ include('_news_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('_news_edit_form.html.twig', {'button_label': 'Update'}) }}
 
     {% if is_granted(\"ROLE_ADMIN\") %}
-        <a class= \"btn btn-outline-primary\" href=\"{{ path('admin_news') }}\">Return</a>
+        <a class= \"button19 btn btn-outline-primary position-relative\" href=\"{{ path('admin_news') }}\">Return</a>
     {% else %}
         <a href=\"{{ path('member_news') }}\">Return</a>
     {% endif %}
 
     {{ include('_news_delete_form.html.twig') }}
+    </div>
+</div>
 
     <footer class=\"footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative\">
         <div class=\"col-md-4 d-flex align-items-center\">
