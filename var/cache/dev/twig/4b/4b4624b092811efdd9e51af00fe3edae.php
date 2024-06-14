@@ -127,7 +127,7 @@ class __TwigTemplate_c35a2181218838fcc1bf99f74724b7f1 extends Template
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("register");
         yield "\">here</a></p>
 
-                <input type=\"hidden\" name=\"_target_path\" value=\"/redirect/\">
+                     <input type=\"hidden\" name=\"_target_path\" value=\"/redirect/\">
                  </form>
         </div>
     </div>
@@ -228,7 +228,7 @@ class __TwigTemplate_c35a2181218838fcc1bf99f74724b7f1 extends Template
 
                      <p class= \"text2 position-relative\">Don't have a account yet? Register &nbsp<a class= \"link1 position-relative\" href=\"{{ path('register') }}\">here</a></p>
 
-                <input type=\"hidden\" name=\"_target_path\" value=\"/redirect/\">
+                     <input type=\"hidden\" name=\"_target_path\" value=\"/redirect/\">
                  </form>
         </div>
     </div>

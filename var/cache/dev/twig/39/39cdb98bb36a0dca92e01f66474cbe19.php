@@ -111,6 +111,10 @@ class __TwigTemplate_078ccac273f565a38e7c8104044d0cac extends Template
         yield "            </table>
     </div>
     </div>
+    <a href= \"";
+        // line 27
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("member_news");
+        yield "\"><button type=\"button\" class=\"btn btn-outline-primary button21 position-relative\">News</button></a>
 
     <footer class=\"footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative\">
         <div class=\"col-md-4 d-flex align-items-center\">
@@ -118,25 +122,25 @@ class __TwigTemplate_078ccac273f565a38e7c8104044d0cac extends Template
         </div>
         <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">
             <li class=\"ms-3\"><a href=\"";
-        // line 33
+        // line 34
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.facebook.com"), "html", null, true);
         yield "\"><img class= \"FBLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/fb_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 34
+        // line 35
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.instagram.com"), "html", null, true);
         yield "\"><img class= \"IGLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/ig_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 35
+        // line 36
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.twitter.com"), "html", null, true);
         yield "\"><img class= \"XLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/x_logo.jpg"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 36
+        // line 37
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.tiktok.com"), "html", null, true);
         yield "\"><img class= \"TTLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/tt_logo.png"), "html", null, true);
@@ -174,7 +178,7 @@ class __TwigTemplate_078ccac273f565a38e7c8104044d0cac extends Template
      */
     public function getDebugInfo()
     {
-        return array (  140 => 36,  134 => 35,  128 => 34,  122 => 33,  111 => 24,  101 => 20,  97 => 19,  93 => 18,  90 => 17,  86 => 16,  73 => 6,  69 => 4,  59 => 3,  36 => 1,);
+        return array (  144 => 37,  138 => 36,  132 => 35,  126 => 34,  116 => 27,  111 => 24,  101 => 20,  97 => 19,  93 => 18,  90 => 17,  86 => 16,  73 => 6,  69 => 4,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -205,6 +209,7 @@ class __TwigTemplate_078ccac273f565a38e7c8104044d0cac extends Template
             </table>
     </div>
     </div>
+    <a href= \"{{ path('member_news') }}\"><button type=\"button\" class=\"btn btn-outline-primary button21 position-relative\">News</button></a>
 
     <footer class=\"footer footer d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top position-relative\">
         <div class=\"col-md-4 d-flex align-items-center\">
