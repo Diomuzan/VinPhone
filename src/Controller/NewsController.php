@@ -16,7 +16,8 @@ class NewsController extends AbstractController {
     }
     #[Route('/member/news', name: 'member_news', methods: ['GET'])]
     public function member_news(NewsRepository $newsRepository): Response {
-        return $this->render('member_news.html.twig', ['news' => $newsRepository->findAll(),]);
+
+        return $this->render('member_news.html.twig', ['news' => $newsRepository->findBy(array('role' => '["ROLE_MEMBER"]'))]);
     }
     #[Route('admin/news/new', name: 'news_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response {

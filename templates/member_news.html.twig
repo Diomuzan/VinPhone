@@ -3,6 +3,9 @@
 {% block title %}VinPhone - News{% endblock %}
 
 {% block body %}
+
+<div class= "card12 card position-relative">
+    <div class= "card-body">
     <h1>News</h1>
 
     <table class="table">
@@ -35,6 +38,8 @@
         {% endfor %}
         </tbody>
     </table>
+    </div>
+</div>
 
         <a href= "{{ path('member_news') }}"><button type="button" class="btn btn-outline-primary button20 position-relative">News</button></a>
 
