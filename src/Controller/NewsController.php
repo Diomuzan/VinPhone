@@ -16,8 +16,11 @@ class NewsController extends AbstractController {
     }
     #[Route('/member/news', name: 'member_news', methods: ['GET'])]
     public function member_news(NewsRepository $newsRepository): Response {
+        $qb = $newsRepository->createQueryBuilder('n');
+        $qb->where($qb->expr()->like('n.role', ':roleMember'))->orWhere($qb->expr()->like('n.role', ':roleBoth'))->setParameter('roleMember', '%"ROLE_MEMBER"%')->setParameter('roleBoth', '%"ROLE_MEMBER"%ROLE_ADMIN"%');
+        $news = $qb->getQuery()->getResult();
 
-        return $this->render('member_news.html.twig', ['news' => $newsRepository->findBy(array('role' => '["ROLE_MEMBER"]'))]);
+        return $this->render('member_news.html.twig', ['news' => $news]);
     }
     #[Route('admin/news/new', name: 'news_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response {
