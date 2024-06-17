@@ -180,7 +180,7 @@ html, body {
 }
 
 .heading3 {
-    left: 101px;
+    left: 0px;
 }
 
 .button8 {
@@ -307,6 +307,16 @@ html, body {
     left: 88px;
     border-radius: 20px;
     margin-right: 0;
+}
+
+.button22 {
+    top: 588px;
+    left: 435px;
+}
+
+.button23 {
+    top: 588px;
+    left: 467px;
 }
 
 

@@ -91,7 +91,7 @@ class __TwigTemplate_d1664a6e99e1e6ba3c19d1fc8eaf9051 extends Template
 
     ";
         // line 8
-        yield Twig\Extension\CoreExtension::include($this->env, $context, "user/_user_manager_form.html.twig");
+        yield Twig\Extension\CoreExtension::include($this->env, $context, "_user_manager_form.html.twig");
         yield "
 
     <a href=\"";
@@ -141,7 +141,7 @@ class __TwigTemplate_d1664a6e99e1e6ba3c19d1fc8eaf9051 extends Template
 {% block body %}
     <h1>Create new User</h1>
 
-    {{ include('user/_user_manager_form.html.twig') }}
+    {{ include('_user_manager_form.html.twig') }}
 
     <a href=\"{{ path('app_user_index') }}\">back to list</a>
 {% endblock %}

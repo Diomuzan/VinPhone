@@ -14,7 +14,7 @@ class UserController extends AbstractController {
         return $this->render('user_manager.html.twig', [
             'users' => $userRepository->findAll(),]);
     }
-    #[Route('/new', name: 'user_manager_new', methods: ['GET', 'POST'])]
+    #[Route('/admin/user-manager/new', name: 'user_manager_new', methods: ['GET', 'POST'])]
     public function new(Request $request, EntityManagerInterface $entityManager): Response {
         $user = new User();
         $form = $this->createForm(UserType::class, $user);

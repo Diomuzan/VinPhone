@@ -25,7 +25,7 @@ return [
         '/admin/add' => [[['_route' => 'add', '_controller' => 'App\\Controller\\PhoneController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/register' => [[['_route' => 'register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/admin/user-manager' => [[['_route' => 'user_manager', '_controller' => 'App\\Controller\\UserController::index'], null, ['GET' => 0], null, false, false, null]],
-        '/new' => [[['_route' => 'user_manager_new', '_controller' => 'App\\Controller\\UserController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/admin/user-manager/new' => [[['_route' => 'user_manager_new', '_controller' => 'App\\Controller\\UserController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/home' => [[['_route' => 'home', '_controller' => 'App\\Controller\\VinPhoneController::guest_home'], null, null, null, false, false, null]],
     ],
     [ // $regexpList

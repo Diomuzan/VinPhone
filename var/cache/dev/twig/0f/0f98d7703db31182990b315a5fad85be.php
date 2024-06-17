@@ -166,10 +166,14 @@ class __TwigTemplate_0ad73d3016e63e365c3cc1b91b30172f extends Template
         yield "        </tbody>
     </table>
 
-    <a href=\"";
+    <a class= \"button22 btn btn-outline-success position-relative\" href=\"";
         // line 43
         yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("user_manager_new");
-        yield "\">New user</a>
+        yield "\">New admin</a>
+            <a class= \"button23 btn btn-outline-primary position-relative\" href=\"";
+        // line 44
+        yield $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("member_dashboard");
+        yield "\">Return</a>
         </div>
     </div>
 
@@ -179,25 +183,25 @@ class __TwigTemplate_0ad73d3016e63e365c3cc1b91b30172f extends Template
         </div>
         <ul class=\"nav col-md-4 justify-content-end list-unstyled d-flex\">
             <li class=\"ms-3\"><a href=\"";
-        // line 52
+        // line 53
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.facebook.com"), "html", null, true);
         yield "\"><img class= \"FBLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/fb_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 53
+        // line 54
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.instagram.com"), "html", null, true);
         yield "\"><img class= \"IGLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/ig_logo.png"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 54
+        // line 55
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.twitter.com"), "html", null, true);
         yield "\"><img class= \"XLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/x_logo.jpg"), "html", null, true);
         yield "\"></a></li>
             <li class=\"ms-3\"><a href=\"";
-        // line 55
+        // line 56
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("https://www.tiktok.com"), "html", null, true);
         yield "\"><img class= \"TTLogo position-relative\" src=\"";
         yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape($this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/pictures/tt_logo.png"), "html", null, true);
@@ -235,7 +239,7 @@ class __TwigTemplate_0ad73d3016e63e365c3cc1b91b30172f extends Template
      */
     public function getDebugInfo()
     {
-        return array (  201 => 55,  195 => 54,  189 => 53,  183 => 52,  171 => 43,  166 => 40,  157 => 36,  148 => 32,  144 => 31,  139 => 29,  135 => 28,  131 => 27,  128 => 26,  123 => 25,  107 => 11,  98 => 8,  95 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
+        return array (  205 => 56,  199 => 55,  193 => 54,  187 => 53,  175 => 44,  171 => 43,  166 => 40,  157 => 36,  148 => 32,  144 => 31,  139 => 29,  135 => 28,  131 => 27,  128 => 26,  123 => 25,  107 => 11,  98 => 8,  95 => 7,  90 => 6,  80 => 5,  60 => 3,  37 => 1,);
     }
 
     public function getSourceContext()
@@ -282,7 +286,8 @@ class __TwigTemplate_0ad73d3016e63e365c3cc1b91b30172f extends Template
         </tbody>
     </table>
 
-    <a href=\"{{ path('user_manager_new') }}\">New user</a>
+    <a class= \"button22 btn btn-outline-success position-relative\" href=\"{{ path('user_manager_new') }}\">New admin</a>
+            <a class= \"button23 btn btn-outline-primary position-relative\" href=\"{{ path('member_dashboard') }}\">Return</a>
         </div>
     </div>
 
